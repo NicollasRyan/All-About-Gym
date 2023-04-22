@@ -1,8 +1,12 @@
+import { Outlet } from "react-router-dom";
+import { GlobalStyle } from "./styles/global";
+
 function App() {
   return (
-    <div className="App">
-      <h1>All About Gym</h1>
-    </div>
+    <>
+      <Outlet />
+      <GlobalStyle />
+    </>
   );
 }
 
