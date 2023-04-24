@@ -10,9 +10,18 @@ export const NavLink = styled(Link)`
   }
 `;
 
+export const NavLinkTitle = styled(Link)`
+  margin-right: auto;
+  text-decoration: none;
+  &:hover {
+    transition: 0.5s;
+    color: #c6c6c6;
+  }
+`;
+
 export const ContentBar = styled(Toolbar)`
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   background-color: #303030;
 `;

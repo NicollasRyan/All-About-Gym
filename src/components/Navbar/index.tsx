@@ -4,42 +4,16 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import { TreeView, TreeItem } from "@mui/lab";
 
-import { NavLink, ContentBar } from "./styled";
+import { NavLink, ContentBar, NavLinkTitle } from "./styled";
 import { TreeContent } from "../../pages/Prioritization/styled";
 
 export function Navbar() {
   return (
     <AppBar component="nav">
       <ContentBar>
-        <NavLink to="/">All ABOUT GYM</NavLink>
+        <NavLinkTitle to="/">All ABOUT GYM</NavLinkTitle>
         <Box>
-          <TreeView
-            defaultCollapseIcon={<ExpandMoreIcon />}
-            defaultExpandIcon={<ChevronRightIcon />}
-            multiSelect
-            sx={{ maxWidth: 400, overflowY: "auto" }}
-          >
-            <TreeContent nodeId="1" label="Sabia sobre ...">
-              <TreeItem
-                nodeId="2"
-                label={
-                  <NavLink to="/prioritization">priorização de treino</NavLink>
-                }
-              />
-              <TreeItem
-                nodeId="3"
-                label={
-                  <NavLink to="/prioritization">priorização de treino</NavLink>
-                }
-              />
-              <TreeItem
-                nodeId="4"
-                label={
-                  <NavLink to="/prioritization">priorização de treino</NavLink>
-                }
-              />
-            </TreeContent>
-          </TreeView>
+          <NavLink to="/prioritization">priorização de treino</NavLink>
         </Box>
       </ContentBar>
     </AppBar>
