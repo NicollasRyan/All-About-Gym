@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Home } from "./pages/Home";
+import { Prioritization } from "./pages/Prioritization";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,6 +16,7 @@ root.render(
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
+          <Route path="/prioritization" element={<Prioritization />} />
         </Route>
       </Routes>
     </Router>
