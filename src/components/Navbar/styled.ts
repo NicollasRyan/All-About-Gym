@@ -24,6 +24,12 @@ export const Button = styled.button`
   align-items: center;
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
+  &:hover {
+    transition: 0.5s;
+    color: #c6c6c6;
+  }
 `;
 
 export const PopperContent = styled(Popper)`
