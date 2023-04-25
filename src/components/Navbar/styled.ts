@@ -22,7 +22,6 @@ export const NavLinkTitle = styled(Link)`
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  justify-content: center;
   background-color: transparent;
   border: none;
 `;
@@ -30,7 +29,8 @@ export const Button = styled.button`
 export const PopperContent = styled(Popper)`
   z-index: 10000;
 
-  background-color: #454a58;
+  background-color: #27292f;
+  border: solid 1px #727477;
   border-radius: 3px;
 `;
 

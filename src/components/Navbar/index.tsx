@@ -28,7 +28,7 @@ export function Navbar() {
         <NavLinkTitle to="/">All ABOUT GYM</NavLinkTitle>
         <Box>
           <Button aria-describedby={id} type="button" onClick={handleClick}>
-            Sabia mais sobre ...
+            SAIBA MAIS SOBRE {open ? "" : "..."}
             {open ? <ExpandMoreIcon /> : <ChevronRightIcon />}
           </Button>
           <PopperContent id={id} open={open} anchorEl={anchorEl}>
