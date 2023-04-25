@@ -36,7 +36,7 @@ export function Navbar() {
               <NavLink to="/prioritization">priorização de treino</NavLink>
             </Box>
             <Box sx={{ p: 1 }}>
-              <NavLink to="/prioritization">Hipertrofia</NavLink>
+              <NavLink to="/Hypertrophy">Hipertrofia</NavLink>
             </Box>
           </PopperContent>
         </Box>
