@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Home } from "./pages/Home";
 import { Prioritization } from "./pages/Prioritization";
 import { Hypertrophy } from "./pages/Hypertrophy";
+import { Nutrition } from "./pages/Nutrition";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,7 +19,8 @@ root.render(
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
           <Route path="/prioritization" element={<Prioritization />} />
-          <Route path="/Hypertrophy" element={<Hypertrophy />} />
+          <Route path="/hypertrophy" element={<Hypertrophy />} />
+          <Route path="/nutrition" element={<Nutrition />} />
         </Route>
       </Routes>
     </Router>

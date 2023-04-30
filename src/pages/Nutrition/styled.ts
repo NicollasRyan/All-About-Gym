@@ -40,10 +40,6 @@ export const ImgProteina = styled.img`
   width: 550px;
 `;
 
-export const ImgLeg = styled.img`
-  width: 500px;
-`;
-
 export const BoxImg = styled.div`
   padding: 20px 0 20px 0;
   display: flex;
