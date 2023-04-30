@@ -20,6 +20,11 @@ export const BoxText = styled.div`
   margin-top: 20px;
 `;
 
+export const BoxTextDry = styled.div`
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+`;
+
 export const Text = styled.p`
   font-weight: 100;
 `;
@@ -29,19 +34,27 @@ export const ContainerList = styled.ol`
 `;
 
 export const ContentList = styled.li`
-  padding: 8px 0 8px 0;
+  padding: 15px 0 15px 0;
 `;
 
 export const Img = styled.img`
-  width: 450px;
+  width: 400px;
+`;
+
+export const ImgCutting = styled.img`
+  width: 500px;
 `;
 
 export const ImgProteina = styled.img`
-  width: 550px;
+  width: 750px;
 `;
 
 export const BoxImg = styled.div`
   padding: 20px 0 20px 0;
   display: flex;
   justify-content: center;
+`;
+
+export const BoxImgCutting = styled.div`
+  padding: 20px 0 20px 0;
 `;
