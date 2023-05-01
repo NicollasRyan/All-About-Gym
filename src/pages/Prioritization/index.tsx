@@ -10,7 +10,7 @@ import {
   BoxImg,
 } from "./styled";
 
-import dor from "../../img/dor.jpg";
+import Mentalty from "../../img/Mentalty.jpg";
 import bench from "../../img/bench.jpg";
 
 export function Prioritization() {
@@ -20,46 +20,60 @@ export function Prioritization() {
       <ContainerText>
         <BoxText>
           <Text>
-            Periodização de treino na musculação é um método de planejamento do
-            treinamento que visa otimizar o desempenho físico e reduzir o risco
-            de lesões através da variação estruturada de intensidade, volume,
-            frequência e exercícios ao longo do tempo.
+            A priorização de treino muscular pode ser uma estratégia útil para
+            ajudar a alcançar um desenvolvimento muscular mais equilibrado e
+            efetivo. No entanto, é importante lembrar que essa estratégia deve
+            ser usada com moderação e equilíbrio.
           </Text>
         </BoxText>
         <BoxImg>
-          <Img src={dor} />
+          <Img src={Mentalty} />
         </BoxImg>
         <BoxText>
           <Text>
-            Basicamente, a periodização é dividida em diferentes fases, cada uma
-            com objetivos e métodos específicos. As três principais fases da
-            periodização são:
+            Um dos principais motivos pelos quais as pessoas optam por priorizar
+            um grupo muscular em seu treinamento é para corrigir desequilíbrios
+            musculares. Por exemplo, alguém pode ter um grupo muscular mais
+            fraco ou subdesenvolvido em comparação com outros grupos musculares,
+            o que pode levar a lesões ou a uma aparência desigual do corpo.
+            Nesses casos, é importante dedicar mais tempo e esforço ao
+            treinamento do grupo muscular mais fraco para ajudar a equilibrar o
+            desenvolvimento muscular.
           </Text>
         </BoxText>
-        <ContainerList>
-          <ContentList>
-            Fase de Base ou de Adaptção: É o período inicial do treinamento que
-            tem como objetivo desenvolver a base física do indivíduo, por meio
-            de exercícios básicos e de baixa a moderada intensidade e volume,
-            buscando uma adaptação muscular e articular.
-          </ContentList>
-          <ContentList>
-            Fase Intermediária ou de Hipertrofia: Nesta fase, o objetivo é o
-            aumento da massa muscular, utilizando exercícios com maior
-            intensidade e volume.
-          </ContentList>
-          <ContentList>
-            Fase de Pico ou de Força Máxima: Essa fase tem como objetivo
-            maximizar a força muscular, utilizando exercícios com altíssima
-            intensidade e menor volume.
-          </ContentList>
-        </ContainerList>
+
         <BoxText>
           <Text>
-            Dentro dessas fases, o treinador ou o atleta pode fazer variações
-            como a mudança dos exercícios, das cargas, do número de repetições e
-            séries, entre outros fatores, para garantir uma progressão gradual e
-            evitar a adaptação do corpo aos mesmos estímulos.
+            Outra razão pela qual as pessoas podem priorizar o treinamento de um
+            grupo muscular específico é para fins estéticos. Por exemplo, alguém
+            pode desejar aprimorar a aparência muscular dos braços, pernas ou
+            abdômen. Nesses casos, é importante incluir exercícios específicos
+            para esses grupos musculares em seu treinamento e aumentar a
+            frequência de treinamento dessas áreas do corpo.
+          </Text>
+        </BoxText>
+
+        <BoxText>
+          <Text>
+            Para priorizar um grupo muscular específico em seu treinamento, é
+            importante seguir um plano de treinamento adequado que inclua
+            exercícios específicos para esse grupo muscular. Por exemplo, se
+            alguém deseja priorizar o desenvolvimento dos braços, pode incluir
+            mais exercícios para bíceps e tríceps em seu treinamento. Também
+            pode ser útil aumentar a frequência de treinamento desses músculos,
+            incluindo-os em sessões de treinamento adicionais ao longo da
+            semana.
+          </Text>
+        </BoxText>
+        <BoxText>
+          <Text>
+            No entanto, é importante lembrar que a priorização excessiva de um
+            grupo muscular pode levar a desequilíbrios musculares e lesões.
+            Portanto, é importante seguir um plano de treinamento equilibrado e
+            variado que inclua exercícios para todos os principais grupos
+            musculares do corpo. Também é importante variar o tipo e a
+            intensidade dos exercícios ao longo do tempo para evitar o estresse
+            excessivo em um grupo muscular específico.
           </Text>
         </BoxText>
         <BoxImg>
@@ -67,12 +81,11 @@ export function Prioritization() {
         </BoxImg>
         <BoxText>
           <Text>
-            A periodização de treino é importante para evitar a estagnação no
-            treinamento e prevenir lesões, pois permite um aumento gradual da
-            carga de trabalho, proporcionando uma adaptação progressiva do corpo
-            às demandas do treinamento. Além disso, a periodização permite uma
-            melhor distribuição dos esforços ao longo do ano, evitando excessos
-            ou falta de estímulos.
+            Em resumo, a priorização de treino muscular pode ser uma estratégia
+            útil para alcançar um desenvolvimento muscular mais equilibrado e
+            efetivo. No entanto, é importante usar essa estratégia com moderação
+            e equilíbrio, e seguir um plano de treinamento adequado que inclua
+            exercícios para todos os principais grupos musculares do corpo.
           </Text>
         </BoxText>
       </ContainerText>
