@@ -8,6 +8,7 @@ import { Home } from "./pages/Home";
 import { Prioritization } from "./pages/Prioritization";
 import { Hypertrophy } from "./pages/Hypertrophy";
 import { Nutrition } from "./pages/Nutrition";
+import { CreateWorkout } from "./pages/CreateWorkout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,6 +22,7 @@ root.render(
           <Route path="/prioritization" element={<Prioritization />} />
           <Route path="/hypertrophy" element={<Hypertrophy />} />
           <Route path="/nutrition" element={<Nutrition />} />
+          <Route path="/createworkout" element={<CreateWorkout />} />
         </Route>
       </Routes>
     </Router>

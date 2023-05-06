@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const NavLink = styled(Link)`
   text-decoration: none;
+  margin-right: 15px;
   &:hover {
     transition: 0.5s;
     color: #c6c6c6;

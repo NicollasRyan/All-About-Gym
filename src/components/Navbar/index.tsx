@@ -26,6 +26,9 @@ export function Navbar() {
     <AppBar component="nav">
       <ContentBar>
         <NavLinkTitle to="/">All ABOUT GYM</NavLinkTitle>
+        <Box sx={{ p: 1 }}>
+          <NavLink to="/createworkout">Crie seu treino semanal</NavLink>
+        </Box>
         <Box>
           <Button aria-describedby={id} type="button" onClick={handleClick}>
             SAIBA MAIS SOBRE {open ? "" : "..."}
