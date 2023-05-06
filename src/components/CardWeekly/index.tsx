@@ -32,7 +32,7 @@ export function CardWeekly({ day }: CardProps) {
     <Container>
       <CardContainer>
         <CardActionArea>
-          <CardMedia />
+          {/* <CardMedia /> */}
           <CardContent>
             <BoxTitle>
               <Text>{day}</Text>

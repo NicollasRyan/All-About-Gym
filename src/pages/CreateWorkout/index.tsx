@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import { Content, Title } from "./styled";
 import { CardWeekly } from "../../components/CardWeekly";
+import { Link } from "react-router-dom";
 
 interface WeekProps {
   day: string;
@@ -22,7 +23,9 @@ export function CreateWorkout() {
       <Title>Monte seu treino semanal</Title>
 
       {week.map((day) => (
-        <CardWeekly day={day.day} />
+        <Link key={day.day} to={`/createworkout/${day.day}`}>
+          <CardWeekly day={day.day} />
+        </Link>
       ))}
     </Content>
   );
