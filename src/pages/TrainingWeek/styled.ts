@@ -21,4 +21,10 @@ export const Button = styled.button`
   width: 250px;
   color: #000;
   font-size: 15px;
+
+  cursor: pointer;
+  :hover {
+    transition: 1s;
+    background-color: #b7b7b7;
+  }
 `;

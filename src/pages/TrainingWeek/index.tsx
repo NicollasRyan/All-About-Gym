@@ -53,6 +53,8 @@ export function TrainingWeek() {
         <Button onClick={handleOpenBiceps}>Bicpes</Button>
 
         <Button onClick={handleOpenLeg}>Perna </Button>
+
+        <Button>Descanso</Button>
       </ContentWorkouts>
       <Shoulder openShoulder={openShoulder} handleClose={handleCloseShoulder} />
       <Chest openChest={openChest} handleClose={handleCloseChest} />
