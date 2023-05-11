@@ -9,6 +9,7 @@ import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
 import { workoutContext } from "../../context/workoutContext";
+import { api } from "../../services/api";
 
 export function TrainingWeek() {
   const { trainingWeek } = useParams();
@@ -34,9 +35,7 @@ export function TrainingWeek() {
   const handleCloseLeg = () => setOpenLeg(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/trainingWeek")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+    api.get("trainingWeek").then((response) => console.log(response.data));
   }, []);
 
   const { workout } = useContext(workoutContext);
