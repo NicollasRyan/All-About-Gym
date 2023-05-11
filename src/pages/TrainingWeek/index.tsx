@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
 import { Checkbox } from "@mui/material";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, ChangeEvent } from "react";
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";

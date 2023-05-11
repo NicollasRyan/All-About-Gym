@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createServer } from "miragejs";
+import { Model, createServer } from "miragejs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import App from "./App";
@@ -13,15 +13,21 @@ import { CreateWorkout } from "./pages/CreateWorkout";
 import { TrainingWeek } from "./pages/TrainingWeek";
 
 createServer({
+  models: {
+    trainingWeek: Model,
+  },
+
   routes() {
     this.namespace = "api";
 
     this.get("/trainingWeek", () => {
-      return [
-        {
-          workout: "remada",
-        },
-      ];
+      return this.schema.all("trainingWeek");
+    });
+
+    this.post("/trainingWeek", (schema, request) => {
+      const data = JSON.parse(request.requestBody);
+
+      return schema.create("trainingWeek", data);
     });
   },
 });

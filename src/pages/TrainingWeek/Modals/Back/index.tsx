@@ -9,6 +9,7 @@ import {
   ModalContainer,
   BoxTraining,
 } from "./styled";
+import { api } from "../../../../services/api";
 
 type FunctioType = {
   openBack: boolean;
@@ -16,20 +17,29 @@ type FunctioType = {
 };
 
 export function Back({ openBack, handleClose }: FunctioType) {
-  const [training, setTraining] = useState("");
+  const [bentOverRow, setBentOverRow] = useState("");
+  const [pull, setPull] = useState("");
   const { workout } = useContext(workoutContext);
 
   const handleCreateWorkout = (e: FormEvent) => {
     e.preventDefault();
 
     handleClose();
-    setTraining("");
+    setBentOverRow("");
 
-    console.log(training);
+    const data = {
+      bentOverRow,
+      pull,
+    };
+
+    api.post("/trainingWeek", data);
   };
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setTraining(e.target.value);
+    setBentOverRow(e.target.value);
+  };
+  const handleCheckboxChangePull = (e: ChangeEvent<HTMLInputElement>) => {
+    setPull(e.target.value);
   };
 
   return (
@@ -50,7 +60,7 @@ export function Back({ openBack, handleClose }: FunctioType) {
             <Checkbox
               type="checkbox"
               value="puxada"
-              onChange={handleCheckboxChange}
+              onChange={handleCheckboxChangePull}
             />
           </BoxTraining>
         </ModalContent>
