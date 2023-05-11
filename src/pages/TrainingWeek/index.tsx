@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
 import { Checkbox } from "@mui/material";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
@@ -33,6 +33,12 @@ export function TrainingWeek() {
   const handleCloseBiceps = () => setOpenBiceps(false);
   const handleCloseLeg = () => setOpenLeg(false);
 
+  useEffect(() => {
+    fetch("http://localhost:3000/api/trainingWeek")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }, []);
+
   const { workout } = useContext(workoutContext);
 
   return (
@@ -44,25 +50,23 @@ export function TrainingWeek() {
           : ` na ${trainingWeek}`}
         ?
       </Title>
-      {workout ? (
-        ""
-      ) : (
-        <ContentWorkouts>
-          <Button onClick={handleOpenShoulder}>Ombro</Button>
 
-          <Button onClick={handleOpenChest}>Peito</Button>
+      <ContentWorkouts>
+        <Button onClick={handleOpenShoulder}>Ombro</Button>
 
-          <Button onClick={handleOpenBack}>Costas</Button>
+        <Button onClick={handleOpenChest}>Peito</Button>
 
-          <Button onClick={handleOpenTriceps}>Tricpes</Button>
+        <Button onClick={handleOpenBack}>Costas</Button>
 
-          <Button onClick={handleOpenBiceps}>Bicpes</Button>
+        <Button onClick={handleOpenTriceps}>Tricpes</Button>
 
-          <Button onClick={handleOpenLeg}>Perna </Button>
+        <Button onClick={handleOpenBiceps}>Bicpes</Button>
 
-          <Button>Descanso</Button>
-        </ContentWorkouts>
-      )}
+        <Button onClick={handleOpenLeg}>Perna </Button>
+
+        <Button>Descanso</Button>
+      </ContentWorkouts>
+
       <Shoulder openShoulder={openShoulder} handleClose={handleCloseShoulder} />
       <Chest openChest={openChest} handleClose={handleCloseChest} />
       <Back openBack={openBack} handleClose={handleCloseBack} />

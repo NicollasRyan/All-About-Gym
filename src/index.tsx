@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createServer } from "miragejs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import App from "./App";
@@ -10,6 +11,20 @@ import { Hypertrophy } from "./pages/Hypertrophy";
 import { Nutrition } from "./pages/Nutrition";
 import { CreateWorkout } from "./pages/CreateWorkout";
 import { TrainingWeek } from "./pages/TrainingWeek";
+
+createServer({
+  routes() {
+    this.namespace = "api";
+
+    this.get("/trainingWeek", () => {
+      return [
+        {
+          workout: "remada",
+        },
+      ];
+    });
+  },
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
