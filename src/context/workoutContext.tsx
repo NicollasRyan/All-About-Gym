@@ -5,6 +5,10 @@ interface workoutContextData {
   setTraining: React.Dispatch<SetStateAction<string>>;
 }
 
+interface workoutInputProps {
+  workout: string;
+}
+
 interface workoutProviderProps {
   children: ReactNode;
 }
@@ -15,6 +19,8 @@ export const workoutContext = createContext<workoutContextData>(
 
 export function WorkoutProvider({ children }: workoutProviderProps) {
   const [training, setTraining] = useState("");
+
+  async function createWorkout(workoutInput: workoutInputProps) {}
 
   return (
     <workoutContext.Provider value={{ workout: training, setTraining }}>

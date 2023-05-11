@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
 import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
 import { Checkbox } from "@mui/material";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
 import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
+import { workoutContext } from "../../context/workoutContext";
 
 export function TrainingWeek() {
   const { trainingWeek } = useParams();
@@ -32,6 +33,8 @@ export function TrainingWeek() {
   const handleCloseBiceps = () => setOpenBiceps(false);
   const handleCloseLeg = () => setOpenLeg(false);
 
+  const { workout } = useContext(workoutContext);
+
   return (
     <ContainerWeek>
       <Title>
@@ -41,21 +44,25 @@ export function TrainingWeek() {
           : ` na ${trainingWeek}`}
         ?
       </Title>
-      <ContentWorkouts>
-        <Button onClick={handleOpenShoulder}>Ombro</Button>
+      {workout ? (
+        ""
+      ) : (
+        <ContentWorkouts>
+          <Button onClick={handleOpenShoulder}>Ombro</Button>
 
-        <Button onClick={handleOpenChest}>Peito</Button>
+          <Button onClick={handleOpenChest}>Peito</Button>
 
-        <Button onClick={handleOpenBack}>Costas</Button>
+          <Button onClick={handleOpenBack}>Costas</Button>
 
-        <Button onClick={handleOpenTriceps}>Tricpes</Button>
+          <Button onClick={handleOpenTriceps}>Tricpes</Button>
 
-        <Button onClick={handleOpenBiceps}>Bicpes</Button>
+          <Button onClick={handleOpenBiceps}>Bicpes</Button>
 
-        <Button onClick={handleOpenLeg}>Perna </Button>
+          <Button onClick={handleOpenLeg}>Perna </Button>
 
-        <Button>Descanso</Button>
-      </ContentWorkouts>
+          <Button>Descanso</Button>
+        </ContentWorkouts>
+      )}
       <Shoulder openShoulder={openShoulder} handleClose={handleCloseShoulder} />
       <Chest openChest={openChest} handleClose={handleCloseChest} />
       <Back openBack={openBack} handleClose={handleCloseBack} />
