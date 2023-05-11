@@ -17,6 +17,19 @@ createServer({
     trainingWeek: Model,
   },
 
+  seeds(server) {
+    server.db.loadData({
+      trainingWeeks: [
+        {
+          bentOverRow: "remada",
+        },
+        {
+          pull: "puxada",
+        },
+      ],
+    });
+  },
+
   routes() {
     this.namespace = "api";
 
