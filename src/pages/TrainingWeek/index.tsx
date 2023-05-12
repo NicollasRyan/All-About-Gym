@@ -11,7 +11,7 @@ import { WorkoutContext } from "../../context/workoutContext";
 
 export function TrainingWeek() {
   const { trainingWeek } = useParams();
-  const trainingWeeks = useContext(WorkoutContext);
+  const { trainingWeeks } = useContext(WorkoutContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
   const [openChest, setOpenChest] = useState(false);
@@ -36,48 +36,45 @@ export function TrainingWeek() {
 
   return (
     <ContainerWeek>
-      {trainingWeeks ? (
-        trainingWeeks.map((training) => (
-          <div key={training.id}>
-            <p>{training.pull}</p>
-            <p>{training.bentOverRow}</p>
-          </div>
-        ))
-      ) : (
-        <>
-          <Title>
-            O que você vai treinar
-            {trainingWeek === "Domingo" || trainingWeek === "Sabado"
-              ? ` no ${trainingWeek} `
-              : ` na ${trainingWeek}`}
-            ?
-          </Title>
-          <ContentWorkouts>
-            <Button onClick={handleOpenShoulder}>Ombro</Button>
+      {trainingWeeks.map((training) => (
+        <div key={training.id}>
+          <p>{training.pull}</p>
+          <p>{training.bentOverRow}</p>
+        </div>
+      ))}
+      <>
+        <Title>
+          O que você vai treinar
+          {trainingWeek === "Domingo" || trainingWeek === "Sabado"
+            ? ` no ${trainingWeek} `
+            : ` na ${trainingWeek}`}
+          ?
+        </Title>
+        <ContentWorkouts>
+          <Button onClick={handleOpenShoulder}>Ombro</Button>
 
-            <Button onClick={handleOpenChest}>Peito</Button>
+          <Button onClick={handleOpenChest}>Peito</Button>
 
-            <Button onClick={handleOpenBack}>Costas</Button>
+          <Button onClick={handleOpenBack}>Costas</Button>
 
-            <Button onClick={handleOpenTriceps}>Tricpes</Button>
+          <Button onClick={handleOpenTriceps}>Tricpes</Button>
 
-            <Button onClick={handleOpenBiceps}>Bicpes</Button>
+          <Button onClick={handleOpenBiceps}>Bicpes</Button>
 
-            <Button onClick={handleOpenLeg}>Perna </Button>
+          <Button onClick={handleOpenLeg}>Perna </Button>
 
-            <Button>Descanso</Button>
-          </ContentWorkouts>
-          <Shoulder
-            openShoulder={openShoulder}
-            handleClose={handleCloseShoulder}
-          />
-          <Chest openChest={openChest} handleClose={handleCloseChest} />
-          <Back openBack={openBack} handleClose={handleCloseBack} />
-          <Triceps openTriceps={openTriceps} handleClose={handleCloseTriceps} />
-          <Biceps openBiceps={openBiceps} handleClose={handleCloseBiceps} />
-          <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
-        </>
-      )}
+          <Button>Descanso</Button>
+        </ContentWorkouts>
+        <Shoulder
+          openShoulder={openShoulder}
+          handleClose={handleCloseShoulder}
+        />
+        <Chest openChest={openChest} handleClose={handleCloseChest} />
+        <Back openBack={openBack} handleClose={handleCloseBack} />
+        <Triceps openTriceps={openTriceps} handleClose={handleCloseTriceps} />
+        <Biceps openBiceps={openBiceps} handleClose={handleCloseBiceps} />
+        <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
+      </>
     </ContainerWeek>
   );
 }

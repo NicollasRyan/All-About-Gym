@@ -9,6 +9,7 @@ import {
   BoxTraining,
 } from "./styled";
 import { api } from "../../../../services/api";
+import { WorkoutContext } from "../../../../context/workoutContext";
 
 type FunctioType = {
   openBack: boolean;
@@ -16,21 +17,21 @@ type FunctioType = {
 };
 
 export function Back({ openBack, handleClose }: FunctioType) {
+  const { createTrainingWeeks } = useContext(WorkoutContext);
+
   const [bentOverRow, setBentOverRow] = useState("");
   const [pull, setPull] = useState("");
 
   const handleCreateWorkout = (e: FormEvent) => {
     e.preventDefault();
 
+    createTrainingWeeks({
+      pull,
+      bentOverRow,
+    });
+
     handleClose();
     setBentOverRow("");
-
-    const data = {
-      bentOverRow,
-      pull,
-    };
-
-    api.post("/trainingWeek", data);
   };
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {

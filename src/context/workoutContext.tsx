@@ -14,14 +14,20 @@ interface TrainingProps {
 }
 
 interface workoutInputProps {
-  workout: string;
+  pull: string;
+  bentOverRow: string;
 }
 
 interface workoutProviderProps {
   children: ReactNode;
 }
 
-export const WorkoutContext = createContext<TrainingProps[]>([]);
+interface ContextData {
+  trainingWeeks: TrainingProps[];
+  createTrainingWeeks: (trainingWeeks: workoutInputProps) => void;
+}
+
+export const WorkoutContext = createContext<ContextData>({} as ContextData);
 
 export function WorkoutProvider({ children }: workoutProviderProps) {
   const [trainingWeeks, setTrainingWeeks] = useState<TrainingProps[]>([]);
@@ -32,8 +38,12 @@ export function WorkoutProvider({ children }: workoutProviderProps) {
       .then((response) => setTrainingWeeks(response.data.trainingWeeks));
   }, []);
 
+  function createTrainingWeeks(trainingWeeks: workoutInputProps) {
+    api.post("/trainingWeek", trainingWeeks);
+  }
+
   return (
-    <WorkoutContext.Provider value={trainingWeeks}>
+    <WorkoutContext.Provider value={{ trainingWeeks, createTrainingWeeks }}>
       {children}
     </WorkoutContext.Provider>
   );
