@@ -24,7 +24,7 @@ interface workoutProviderProps {
 
 interface ContextData {
   trainingWeeks: TrainingProps[];
-  createTrainingWeeks: (trainingWeeks: workoutInputProps) => void;
+  createTrainingWeeks: (trainingWeeks: workoutInputProps) => Promise<void>;
 }
 
 export const WorkoutContext = createContext<ContextData>({} as ContextData);
@@ -38,8 +38,11 @@ export function WorkoutProvider({ children }: workoutProviderProps) {
       .then((response) => setTrainingWeeks(response.data.trainingWeeks));
   }, []);
 
-  function createTrainingWeeks(trainingWeeks: workoutInputProps) {
-    api.post("/trainingWeek", trainingWeeks);
+  async function createTrainingWeeks(trainingWeeksInput: workoutInputProps) {
+    const response = await api.post("/trainingWeek", trainingWeeksInput);
+    const { trainingWeek } = response.data;
+
+    setTrainingWeeks([...trainingWeeks, trainingWeek]);
   }
 
   return (

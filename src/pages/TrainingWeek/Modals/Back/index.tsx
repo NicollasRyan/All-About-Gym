@@ -22,17 +22,17 @@ export function Back({ openBack, handleClose }: FunctioType) {
   const [bentOverRow, setBentOverRow] = useState("");
   const [pull, setPull] = useState("");
 
-  const handleCreateWorkout = (e: FormEvent) => {
+  async function handleCreateWorkout(e: FormEvent) {
     e.preventDefault();
 
-    createTrainingWeeks({
+    await createTrainingWeeks({
       pull,
       bentOverRow,
     });
 
     handleClose();
     setBentOverRow("");
-  };
+  }
 
   const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
     setBentOverRow(e.target.value);
