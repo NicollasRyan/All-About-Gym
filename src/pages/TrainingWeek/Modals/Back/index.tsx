@@ -19,7 +19,6 @@ type FunctioType = {
 export function Back({ openBack, handleClose }: FunctioType) {
   const [bentOverRow, setBentOverRow] = useState("");
   const [pull, setPull] = useState("");
-  const { workout } = useContext(workoutContext);
 
   const handleCreateWorkout = (e: FormEvent) => {
     e.preventDefault();

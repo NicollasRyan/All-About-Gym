@@ -48,8 +48,6 @@ export function TrainingWeek() {
       .then((response) => setTrainingWeeks(response.data.trainingWeeks));
   }, []);
 
-  const { workout } = useContext(workoutContext);
-
   return (
     <ContainerWeek>
       {trainingWeeks ? (

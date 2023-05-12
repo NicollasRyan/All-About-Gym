@@ -13,9 +13,7 @@ interface workoutProviderProps {
   children: ReactNode;
 }
 
-export const workoutContext = createContext<workoutContextData>(
-  {} as workoutContextData
-);
+export const workoutContext = createContext([]);
 
 export function WorkoutProvider({ children }: workoutProviderProps) {
   const [training, setTraining] = useState("");
@@ -23,8 +21,6 @@ export function WorkoutProvider({ children }: workoutProviderProps) {
   async function createWorkout(workoutInput: workoutInputProps) {}
 
   return (
-    <workoutContext.Provider value={{ workout: training, setTraining }}>
-      {children}
-    </workoutContext.Provider>
+    <workoutContext.Provider value={[]}>{children}</workoutContext.Provider>
   );
 }
