@@ -1,24 +1,18 @@
 import { useParams } from "react-router-dom";
 import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
-import { Checkbox } from "@mui/material";
-import { useState, useContext, useEffect, ChangeEvent } from "react";
+import { useState, useContext } from "react";
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
 import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
-import { workoutContext } from "../../context/workoutContext";
-import { api } from "../../services/api";
-
-interface TrainingProps {
-  id: number;
-  pull: string;
-  bentOverRow: string;
-}
+import { WorkoutContext } from "../../context/workoutContext";
 
 export function TrainingWeek() {
   const { trainingWeek } = useParams();
+  const trainingWeeks = useContext(WorkoutContext);
+
   const [openShoulder, setOpenShoulder] = useState(false);
   const [openChest, setOpenChest] = useState(false);
   const [openBack, setOpenBack] = useState(false);
@@ -40,22 +34,14 @@ export function TrainingWeek() {
   const handleCloseBiceps = () => setOpenBiceps(false);
   const handleCloseLeg = () => setOpenLeg(false);
 
-  const [trainingWeeks, setTrainingWeeks] = useState<TrainingProps[]>([]);
-
-  useEffect(() => {
-    api
-      .get("trainingWeek")
-      .then((response) => setTrainingWeeks(response.data.trainingWeeks));
-  }, []);
-
   return (
     <ContainerWeek>
       {trainingWeeks ? (
         trainingWeeks.map((training) => (
-          <>
+          <div key={training.id}>
             <p>{training.pull}</p>
             <p>{training.bentOverRow}</p>
-          </>
+          </div>
         ))
       ) : (
         <>

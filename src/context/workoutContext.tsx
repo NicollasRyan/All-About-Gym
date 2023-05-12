@@ -1,8 +1,16 @@
-import { ReactNode, SetStateAction, createContext, useState } from "react";
+import {
+  ReactNode,
+  SetStateAction,
+  createContext,
+  useEffect,
+  useState,
+} from "react";
+import { api } from "../services/api";
 
-interface workoutContextData {
-  workout: string;
-  setTraining: React.Dispatch<SetStateAction<string>>;
+interface TrainingProps {
+  id: number;
+  pull: string;
+  bentOverRow: string;
 }
 
 interface workoutInputProps {
@@ -13,14 +21,20 @@ interface workoutProviderProps {
   children: ReactNode;
 }
 
-export const workoutContext = createContext([]);
+export const WorkoutContext = createContext<TrainingProps[]>([]);
 
 export function WorkoutProvider({ children }: workoutProviderProps) {
-  const [training, setTraining] = useState("");
+  const [trainingWeeks, setTrainingWeeks] = useState<TrainingProps[]>([]);
 
-  async function createWorkout(workoutInput: workoutInputProps) {}
+  useEffect(() => {
+    api
+      .get("trainingWeek")
+      .then((response) => setTrainingWeeks(response.data.trainingWeeks));
+  }, []);
 
   return (
-    <workoutContext.Provider value={[]}>{children}</workoutContext.Provider>
+    <WorkoutContext.Provider value={trainingWeeks}>
+      {children}
+    </WorkoutContext.Provider>
   );
 }
