@@ -58,10 +58,7 @@ root.render(
           <Route path="/hypertrophy" element={<Hypertrophy />} />
           <Route path="/nutrition" element={<Nutrition />} />
           <Route path="/createworkout" element={<CreateWorkout />} />
-          <Route
-            path="/createworkout/:trainingWeek"
-            element={<TrainingWeek />}
-          />
+          <Route path="/createworkout/domingo" element={<TrainingWeek />} />
         </Route>
       </Routes>
     </Router>
