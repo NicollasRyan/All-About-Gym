@@ -9,7 +9,7 @@ import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
 import { WorkoutContext } from "../../context/workoutContext";
 
-export function TrainingWeek() {
+export function TrainingFriday() {
   const { trainingWeek } = useParams();
   const { trainingWeeks } = useContext(WorkoutContext);
 
@@ -45,13 +45,7 @@ export function TrainingWeek() {
         ))
       ) : (
         <>
-          <Title>
-            O que você vai treinar
-            {trainingWeek === "Domingo" || trainingWeek === "Sabado"
-              ? ` no ${trainingWeek} `
-              : ` na ${trainingWeek}`}
-            ?
-          </Title>
+          <Title>O que você vai treinar na Sexta?</Title>
           <ContentWorkouts>
             <Button onClick={handleOpenShoulder}>Ombro</Button>
 

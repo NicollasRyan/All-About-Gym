@@ -10,7 +10,13 @@ import { Prioritization } from "./pages/Prioritization";
 import { Hypertrophy } from "./pages/Hypertrophy";
 import { Nutrition } from "./pages/Nutrition";
 import { CreateWorkout } from "./pages/CreateWorkout";
-import { TrainingWeek } from "./pages/TrainingWeek";
+import { TrainingMonday } from "./pages/TrainingMonday";
+import { TrainingFriday } from "./pages/TrainingFriday";
+import { TrainingSaturday } from "./pages/TrainingSaturday";
+import { TrainingThursday } from "./pages/TrainingThursday";
+import { TrainingTuesday } from "./pages/TrainingTuesday";
+import { TrainingWednesday } from "./pages/TrainingWednesday";
+import { TrainingSunday } from "./pages/TrainingSunday";
 
 createServer({
   models: {
@@ -58,7 +64,13 @@ root.render(
           <Route path="/hypertrophy" element={<Hypertrophy />} />
           <Route path="/nutrition" element={<Nutrition />} />
           <Route path="/createworkout" element={<CreateWorkout />} />
-          <Route path="/createworkout/domingo" element={<TrainingWeek />} />
+          <Route path="/createworkout/segunda" element={<TrainingMonday />} />
+          <Route path="/createworkout/sexta" element={<TrainingFriday />} />
+          <Route path="/createworkout/sabado" element={<TrainingSaturday />} />
+          <Route path="/createworkout/quinta" element={<TrainingThursday />} />
+          <Route path="/createworkout/terça" element={<TrainingTuesday />} />
+          <Route path="/createworkout/quarta" element={<TrainingWednesday />} />
+          <Route path="/createworkout/domingo" element={<TrainingSunday />} />
         </Route>
       </Routes>
     </Router>
