@@ -25,14 +25,7 @@ createServer({
 
   seeds(server) {
     server.db.loadData({
-      trainingWeeks: [
-        {
-          bentOverRow: "remada",
-        },
-        {
-          pull: "puxada",
-        },
-      ],
+      trainingWeeks: [],
     });
   },
 

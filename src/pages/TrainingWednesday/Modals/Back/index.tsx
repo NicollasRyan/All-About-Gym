@@ -8,7 +8,6 @@ import {
   ModalContainer,
   BoxTraining,
 } from "./styled";
-import { api } from "../../../../services/api";
 import { WorkoutContext } from "../../../../context/workoutContext";
 
 type FunctioType = {

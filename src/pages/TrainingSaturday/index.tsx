@@ -36,14 +36,7 @@ export function TrainingSaturday() {
 
   return (
     <ContainerWeek>
-      {trainingWeeks ? (
-        trainingWeeks.map((training) => (
-          <div key={training.id}>
-            <p>{training.pull}</p>
-            <p>{training.bentOverRow}</p>
-          </div>
-        ))
-      ) : (
+      {trainingWeeks.length === 0 ? (
         <>
           <Title>O que você vai treinar Sábado?</Title>
           <ContentWorkouts>
@@ -71,6 +64,13 @@ export function TrainingSaturday() {
           <Biceps openBiceps={openBiceps} handleClose={handleCloseBiceps} />
           <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
         </>
+      ) : (
+        trainingWeeks.map((training) => (
+          <div key={training.id}>
+            <p>{training.pull}</p>
+            <p>{training.bentOverRow}</p>
+          </div>
+        ))
       )}
     </ContainerWeek>
   );
