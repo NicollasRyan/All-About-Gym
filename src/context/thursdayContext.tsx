@@ -8,14 +8,17 @@ import {
 import { api } from "../services/api";
 
 interface TrainingProps {
-  id: number;
-  pull: string;
-  bentOverRow: string;
+  back: TypeBack;
 }
 
-interface workoutInputProps {
+type TypeBack = {
+  id?: number;
   pull: string;
   bentOverRow: string;
+};
+
+interface workoutInputProps {
+  back: TypeBack;
 }
 
 interface workoutProviderProps {
@@ -27,9 +30,9 @@ interface ContextData {
   createTrainingWeeks: (trainingWeeks: workoutInputProps) => Promise<void>;
 }
 
-export const WorkoutContext = createContext<ContextData>({} as ContextData);
+export const ThursdayContext = createContext<ContextData>({} as ContextData);
 
-export function WorkoutProvider({ children }: workoutProviderProps) {
+export function ThursdayProvider({ children }: workoutProviderProps) {
   const [trainingWeeks, setTrainingWeeks] = useState<TrainingProps[]>([]);
 
   useEffect(() => {
@@ -46,8 +49,8 @@ export function WorkoutProvider({ children }: workoutProviderProps) {
   }
 
   return (
-    <WorkoutContext.Provider value={{ trainingWeeks, createTrainingWeeks }}>
+    <ThursdayContext.Provider value={{ trainingWeeks, createTrainingWeeks }}>
       {children}
-    </WorkoutContext.Provider>
+    </ThursdayContext.Provider>
   );
 }

@@ -18,6 +18,14 @@ import { TrainingTuesday } from "./pages/TrainingTuesday";
 import { TrainingWednesday } from "./pages/TrainingWednesday";
 import { TrainingSunday } from "./pages/TrainingSunday";
 
+import { MondayProvider } from "./context/mondayContext";
+import { FridayProvider } from "./context/fridayContext";
+import { SaturdayProvider } from "./context/saturdayContext";
+import { SundayProvider } from "./context/sundayContext";
+import { ThursdayProvider } from "./context/thursdayContext";
+import { TuesdayProvider } from "./context/tuesdayContext";
+import { WednesdayProvider } from "./context/wednesdayContext";
+
 createServer({
   models: {
     trainingWeek: Model,
@@ -49,24 +57,65 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route element={<App />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/prioritization" element={<Prioritization />} />
-          <Route path="/hypertrophy" element={<Hypertrophy />} />
-          <Route path="/nutrition" element={<Nutrition />} />
-          <Route path="/createworkout" element={<CreateWorkout />} />
-          <Route path="/createworkout/segunda" element={<TrainingMonday />} />
-          <Route path="/createworkout/sexta" element={<TrainingFriday />} />
-          <Route path="/createworkout/sabado" element={<TrainingSaturday />} />
-          <Route path="/createworkout/quinta" element={<TrainingThursday />} />
-          <Route path="/createworkout/terça" element={<TrainingTuesday />} />
-          <Route path="/createworkout/quarta" element={<TrainingWednesday />} />
-          <Route path="/createworkout/domingo" element={<TrainingSunday />} />
-        </Route>
-      </Routes>
-    </Router>
+    <FridayProvider>
+      <MondayProvider>
+        <SaturdayProvider>
+          <SundayProvider>
+            <ThursdayProvider>
+              <TuesdayProvider>
+                <WednesdayProvider>
+                  <Router>
+                    <Routes>
+                      <Route element={<App />}>
+                        <Route path="/" element={<Home />} />
+                        <Route
+                          path="/prioritization"
+                          element={<Prioritization />}
+                        />
+                        <Route path="/hypertrophy" element={<Hypertrophy />} />
+                        <Route path="/nutrition" element={<Nutrition />} />
+                        <Route
+                          path="/createworkout"
+                          element={<CreateWorkout />}
+                        />
+                        <Route
+                          path="/createworkout/segunda"
+                          element={<TrainingMonday />}
+                        />
+                        <Route
+                          path="/createworkout/sexta"
+                          element={<TrainingFriday />}
+                        />
+                        <Route
+                          path="/createworkout/sabado"
+                          element={<TrainingSaturday />}
+                        />
+                        <Route
+                          path="/createworkout/quinta"
+                          element={<TrainingThursday />}
+                        />
+                        <Route
+                          path="/createworkout/terça"
+                          element={<TrainingTuesday />}
+                        />
+                        <Route
+                          path="/createworkout/quarta"
+                          element={<TrainingWednesday />}
+                        />
+                        <Route
+                          path="/createworkout/domingo"
+                          element={<TrainingSunday />}
+                        />
+                      </Route>
+                    </Routes>
+                  </Router>
+                </WednesdayProvider>
+              </TuesdayProvider>
+            </ThursdayProvider>
+          </SundayProvider>
+        </SaturdayProvider>
+      </MondayProvider>
+    </FridayProvider>
   </React.StrictMode>
 );
 

@@ -7,11 +7,11 @@ import { Back } from "./Modals/Back";
 import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
-import { WorkoutContext } from "../../context/workoutContext";
+import { SundayContext } from "../../context/sundayContext";
 
 export function TrainingSunday() {
   const { trainingWeek } = useParams();
-  const { trainingWeeks } = useContext(WorkoutContext);
+  const { trainingWeeks } = useContext(SundayContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
   const [openChest, setOpenChest] = useState(false);
@@ -66,9 +66,9 @@ export function TrainingSunday() {
         </>
       ) : (
         trainingWeeks.map((training) => (
-          <div key={training.id}>
-            <p>{training.pull}</p>
-            <p>{training.bentOverRow}</p>
+          <div key={training.back.id}>
+            <p>{training.back.pull}</p>
+            <p>{training.back.bentOverRow}</p>
           </div>
         ))
       )}

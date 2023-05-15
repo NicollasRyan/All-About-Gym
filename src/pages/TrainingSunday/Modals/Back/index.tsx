@@ -9,7 +9,7 @@ import {
   BoxTraining,
 } from "./styled";
 import { api } from "../../../../services/api";
-import { WorkoutContext } from "../../../../context/workoutContext";
+import { SundayContext } from "../../../../context/sundayContext";
 
 type FunctioType = {
   openBack: boolean;
@@ -17,7 +17,7 @@ type FunctioType = {
 };
 
 export function Back({ openBack, handleClose }: FunctioType) {
-  const { createTrainingWeeks } = useContext(WorkoutContext);
+  const { createTrainingWeeks } = useContext(SundayContext);
 
   const [bentOverRow, setBentOverRow] = useState("");
   const [pull, setPull] = useState("");
@@ -26,8 +26,7 @@ export function Back({ openBack, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
-      pull,
-      bentOverRow,
+      back: { pull, bentOverRow },
     });
 
     handleClose();

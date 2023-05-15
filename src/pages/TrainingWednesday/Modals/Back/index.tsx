@@ -8,7 +8,7 @@ import {
   ModalContainer,
   BoxTraining,
 } from "./styled";
-import { WorkoutContext } from "../../../../context/workoutContext";
+import { WednesdayContext } from "../../../../context/wednesdayContext";
 
 type FunctioType = {
   openBack: boolean;
@@ -16,7 +16,7 @@ type FunctioType = {
 };
 
 export function Back({ openBack, handleClose }: FunctioType) {
-  const { createTrainingWeeks } = useContext(WorkoutContext);
+  const { createTrainingWeeks } = useContext(WednesdayContext);
 
   const [bentOverRow, setBentOverRow] = useState("");
   const [pull, setPull] = useState("");
@@ -25,8 +25,7 @@ export function Back({ openBack, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
-      pull,
-      bentOverRow,
+      back: { pull, bentOverRow },
     });
 
     handleClose();
