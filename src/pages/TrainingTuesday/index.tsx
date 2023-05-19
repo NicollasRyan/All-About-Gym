@@ -65,9 +65,8 @@ export function TrainingTuesday() {
         </>
       ) : (
         trainingWeeks.map((training) => (
-          <div key={training.back.id}>
-            <p>{training.back.pull}</p>
-            <p>{training.back.bentOverRow}</p>
+          <div key={training.id}>
+            <p>{training.bentOverRow}</p>
           </div>
         ))
       )}

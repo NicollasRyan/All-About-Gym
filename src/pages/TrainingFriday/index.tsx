@@ -66,9 +66,11 @@ export function TrainingFriday() {
         </>
       ) : (
         trainingWeeks.map((training) => (
-          <div key={training.back.id}>
-            <p>{training.back.pull}</p>
-            <p>{training.back.bentOverRow}</p>
+          <div key={training.id}>
+            <h1>{training.back}</h1>
+            <p>{training.earth}</p>
+            <p>{training.pulldown}</p>
+            <p>{training.wBar}</p>
           </div>
         ))
       )}
