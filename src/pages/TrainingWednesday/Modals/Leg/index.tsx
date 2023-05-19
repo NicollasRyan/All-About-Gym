@@ -35,6 +35,7 @@ export function Leg({ openLeg, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
+      leg: "Perna",
       barbellSquat,
       sink,
       rack,

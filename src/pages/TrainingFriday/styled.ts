@@ -7,6 +7,8 @@ export const ContainerWeek = styled(Container)`
 
 export const Title = styled.h1``;
 
+export const BoxTitle = styled.div``;
+
 export const ContentWorkouts = styled.div`
   margin-top: 100px;
 

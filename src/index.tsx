@@ -95,7 +95,7 @@ root.render(
                           element={<TrainingThursday />}
                         />
                         <Route
-                          path="/createworkout/terça"
+                          path="/createworkout/terca"
                           element={<TrainingTuesday />}
                         />
                         <Route

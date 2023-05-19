@@ -8,6 +8,12 @@ import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
 import { SundayContext } from "../../context/sundayContext";
+import { LegPage } from "../../components/LegPage";
+import { ShoulderPage } from "../../components/ShoulderPage";
+import { TricepsPage } from "../../components/TricepsPage";
+import { ChestPage } from "../../components/ChestPage";
+import { BicepsPage } from "../../components/BicepsPage";
+import { BackPage } from "../../components/BackPage";
 
 export function TrainingSunday() {
   const { trainingWeek } = useParams();
@@ -67,7 +73,73 @@ export function TrainingSunday() {
       ) : (
         trainingWeeks.map((training) => (
           <div key={training.id}>
-            <p>{training.bentOverRow}</p>
+            <BackPage
+              back={training.back}
+              bentOverRow={training.bentOverRow}
+              frontHighPull={training.frontHighPull}
+              benchRow={training.benchRow}
+              pullclosed={training.pullclosed}
+              pullTriangle={training.pullTriangle}
+              lowRow={training.lowRow}
+              rowingHorse={training.rowingHorse}
+              handsaw={training.handsaw}
+              pulldown={training.pulldown}
+              earth={training.earth}
+            />
+            <BicepsPage
+              biceps={training.biceps}
+              dumbbellThread={training.dumbbellThread}
+              dumbbellHammer={training.dumbbellHammer}
+              wBar={training.wBar}
+              threadRoper={training.threadRoper}
+              inclineBenchThread={training.inclineBenchThread}
+              scottBank={training.scottBank}
+              concentratedThread={training.concentratedThread}
+            />
+            <ChestPage
+              chest={training.chest}
+              benchPress={training.benchPress}
+              inclineBenchPress={training.inclineBenchPress}
+              peckDeck={training.peckDeck}
+              benchPressSitting={training.benchPressSitting}
+              highCrossOver={training.highCrossOver}
+              crossOverMedium={training.crossOverMedium}
+              crossOverBass={training.crossOverBass}
+            />
+            <LegPage
+              leg={training.leg}
+              barbellSquat={training.barbellSquat}
+              sink={training.sink}
+              rack={training.rack}
+              legPress={training.legPress}
+              bugaro={training.bugaro}
+              flexorTable={training.flexorTable}
+              flexorChair={training.flexorChair}
+              extensionChair={training.extensionChair}
+              abductor={training.abductor}
+              adductor={training.adductor}
+              pelvicElevation={training.pelvicElevation}
+              kick={training.kick}
+            />
+            <ShoulderPage
+              sholder={training.sholder}
+              sideRaise={training.sideRaise}
+              frontElevation={training.frontElevation}
+              development={training.development}
+              arnoldDevelopment={training.arnoldDevelopment}
+              crossLateralRaise={training.crossLateralRaise}
+              inclinedLateralRaise={training.inclinedLateralRaise}
+              reverseCrucifix={training.reverseCrucifix}
+            />
+            <TricepsPage
+              triceps={training.triceps}
+              barTriceps={training.barTriceps}
+              ropeTriceps={training.ropeTriceps}
+              french={training.french}
+              closedBenchPress={training.closedBenchPress}
+              forehead={training.forehead}
+              foreheadPulley={training.foreheadPulley}
+            />
           </div>
         ))
       )}

@@ -14,25 +14,25 @@ export function CreateWorkout() {
     <Content>
       <Title>Monte seu treino semanal</Title>
 
-      <Link to={`/createworkout/domingo`}>
+      <Link to={`/createworkout/Domingo`}>
         <CardSunday />
       </Link>
-      <Link to={`/createworkout/segunda`}>
+      <Link to={`/createworkout/Segunda`}>
         <CardMonday />
       </Link>
-      <Link to={`/createworkout/terça`}>
+      <Link to={`/createworkout/Terca`}>
         <CardTuesday />
       </Link>
-      <Link to={`/createworkout/quarta`}>
+      <Link to={`/createworkout/Quarta`}>
         <CardWednesday />
       </Link>
-      <Link to={`/createworkout/quinta`}>
+      <Link to={`/createworkout/Quinta`}>
         <CardThursday />
       </Link>
-      <Link to={`/createworkout/sexta`}>
+      <Link to={`/createworkout/Sexta`}>
         <CardFriday />
       </Link>
-      <Link to={`/createworkout/sabado`}>
+      <Link to={`/createworkout/Sabado`}>
         <CardSaturday />
       </Link>
     </Content>

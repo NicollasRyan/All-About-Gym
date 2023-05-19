@@ -30,6 +30,7 @@ export function Chest({ openChest, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
+      chest: "Peito",
       benchPress,
       inclineBenchPress,
       peckDeck,

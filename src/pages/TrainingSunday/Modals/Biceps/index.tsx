@@ -30,6 +30,7 @@ export function Biceps({ openBiceps, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
+      biceps: "Biceps",
       dumbbellThread,
       dumbbellHammer,
       wBar,

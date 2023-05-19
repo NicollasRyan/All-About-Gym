@@ -8,7 +8,7 @@ import {
 import { api } from "../services/api";
 
 interface TrainingProps {
-  id: number;
+  id?: number;
   // Back
   back?: string;
   bentOverRow?: string;
@@ -22,6 +22,7 @@ interface TrainingProps {
   pulldown?: string;
   earth?: string;
   // Biceps
+  biceps?: string;
   dumbbellThread?: string;
   dumbbellHammer?: string;
   wBar?: string;
@@ -30,6 +31,7 @@ interface TrainingProps {
   scottBank?: string;
   concentratedThread?: string;
   // Chest
+  chest?: string;
   benchPress?: string;
   inclineBenchPress?: string;
   peckDeck?: string;
@@ -38,6 +40,7 @@ interface TrainingProps {
   crossOverMedium?: string;
   crossOverBass?: string;
   // Leg
+  leg?: string;
   barbellSquat?: string;
   sink?: string;
   rack?: string;
@@ -51,6 +54,7 @@ interface TrainingProps {
   pelvicElevation?: string;
   kick?: string;
   // Sholder
+  sholder?: string;
   sideRaise?: string;
   frontElevation?: string;
   development?: string;
@@ -59,6 +63,7 @@ interface TrainingProps {
   inclinedLateralRaise?: string;
   reverseCrucifix?: string;
   // Triceps
+  triceps?: string;
   barTriceps?: string;
   ropeTriceps?: string;
   french?: string;
@@ -81,6 +86,7 @@ interface workoutInputProps {
   pulldown?: string;
   earth?: string;
   // Biceps
+  biceps?: string;
   dumbbellThread?: string;
   dumbbellHammer?: string;
   wBar?: string;
@@ -89,6 +95,7 @@ interface workoutInputProps {
   scottBank?: string;
   concentratedThread?: string;
   // Chest
+  chest?: string;
   benchPress?: string;
   inclineBenchPress?: string;
   peckDeck?: string;
@@ -97,6 +104,7 @@ interface workoutInputProps {
   crossOverMedium?: string;
   crossOverBass?: string;
   // Leg
+  leg?: string;
   barbellSquat?: string;
   sink?: string;
   rack?: string;
@@ -110,6 +118,7 @@ interface workoutInputProps {
   pelvicElevation?: string;
   kick?: string;
   // Sholder
+  sholder?: string;
   sideRaise?: string;
   frontElevation?: string;
   development?: string;
@@ -118,6 +127,7 @@ interface workoutInputProps {
   inclinedLateralRaise?: string;
   reverseCrucifix?: string;
   // Triceps
+  triceps?: string;
   barTriceps?: string;
   ropeTriceps?: string;
   french?: string;

@@ -30,6 +30,8 @@ export function Shoulder({ openShoulder, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
+      sholder: "Ombro",
+
       sideRaise,
       frontElevation,
       development,

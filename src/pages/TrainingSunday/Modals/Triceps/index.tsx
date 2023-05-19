@@ -31,6 +31,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
     e.preventDefault();
 
     await createTrainingWeeks({
+      triceps: "triceps",
       barTriceps,
       ropeTriceps,
       french,
@@ -51,7 +52,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             Triceps barra
             <Checkbox
               type="checkbox"
-              value="remada"
+              value="Triceps barra"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setBarTriceps(e.target.value)
               }
@@ -61,7 +62,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             Triceps corda
             <Checkbox
               type="checkbox"
-              value="puxada"
+              value="Triceps corda"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setRopeTriceps(e.target.value)
               }
@@ -71,7 +72,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             frances com halter ou polia
             <Checkbox
               type="checkbox"
-              value="puxada"
+              value="frances com halter ou polia"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setFrench(e.target.value)
               }
@@ -81,7 +82,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             Supino fechado
             <Checkbox
               type="checkbox"
-              value="puxada"
+              value="Supino fechado"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setClosedBenchPress(e.target.value)
               }
@@ -91,7 +92,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             Testa com halteres ou barra
             <Checkbox
               type="checkbox"
-              value="puxada"
+              value="Testa com halteres ou barra"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setForehead(e.target.value)
               }
@@ -101,7 +102,7 @@ export function Triceps({ openTriceps, handleClose }: FunctioType) {
             Testa na polia
             <Checkbox
               type="checkbox"
-              value="puxada"
+              value="Testa na polia"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setForeheadPulley(e.target.value)
               }
