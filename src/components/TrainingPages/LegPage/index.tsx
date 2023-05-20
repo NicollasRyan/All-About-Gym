@@ -45,7 +45,9 @@ export function LegPage({
       <BoxTitle>
         <Title>
           {leg &&
-            `${day === "Terca" ? "Terça" : `${day}`} fazer ${leg} (Leg Day)`}
+            `${
+              day === "Terca" ? "Terça" : `${day}`
+            } você vai fazer ${leg} (Leg Day)`}
         </Title>
       </BoxTitle>
       <Box>

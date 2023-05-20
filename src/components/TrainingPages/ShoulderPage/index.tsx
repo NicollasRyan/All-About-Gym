@@ -37,7 +37,7 @@ export function ShoulderPage({
           {sholder &&
             `${
               day === "Terca" ? "Terça" : `${day}`
-            } fazer ${sholder} (Shoulder Day)`}
+            } você vai fazer ${sholder} (Shoulder Day)`}
         </Title>
       </BoxTitle>
       <Box>

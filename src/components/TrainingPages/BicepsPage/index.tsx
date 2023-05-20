@@ -34,7 +34,8 @@ export function BicepsPage({
     <Content>
       <BoxTitle>
         <Title>
-          {biceps && `${day === "Terca" ? "Terça" : `${day}`} fazer ${biceps}`}
+          {biceps &&
+            `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${biceps}`}
         </Title>
       </BoxTitle>
       <Box>

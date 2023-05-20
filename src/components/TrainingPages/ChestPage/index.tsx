@@ -37,7 +37,7 @@ export function ChestPage({
           {chest &&
             `${
               day === "Terca" ? "Terça" : `${day}`
-            } fazer ${chest} (Chest Day)`}
+            } você vai fazer ${chest} (Chest Day)`}
         </Title>
       </BoxTitle>
       <Box>

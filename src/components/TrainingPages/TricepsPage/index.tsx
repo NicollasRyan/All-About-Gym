@@ -33,7 +33,7 @@ export function TricepsPage({
       <BoxTitle>
         <Title>
           {triceps &&
-            `${day === "Terca" ? "Terça" : `${day}`} fazer ${triceps}`}
+            `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${triceps}`}
         </Title>
       </BoxTitle>
       <Box>

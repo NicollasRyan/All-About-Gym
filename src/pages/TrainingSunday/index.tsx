@@ -8,12 +8,12 @@ import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
 import { SundayContext } from "../../context/sundayContext";
-import { LegPage } from "../../components/LegPage";
-import { ShoulderPage } from "../../components/ShoulderPage";
-import { TricepsPage } from "../../components/TricepsPage";
-import { ChestPage } from "../../components/ChestPage";
-import { BicepsPage } from "../../components/BicepsPage";
-import { BackPage } from "../../components/BackPage";
+import { LegPage } from "../../components/TrainingPages/LegPage";
+import { ShoulderPage } from "../../components/TrainingPages/ShoulderPage";
+import { TricepsPage } from "../../components/TrainingPages/TricepsPage";
+import { ChestPage } from "../../components/TrainingPages/ChestPage";
+import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
+import { BackPage } from "../../components/TrainingPages/BackPage";
 
 export function TrainingSunday() {
   const { trainingWeek } = useParams();

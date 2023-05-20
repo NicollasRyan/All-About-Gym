@@ -41,7 +41,9 @@ export function BackPage({
       <BoxTitle>
         <Title>
           {back &&
-            `${day === "Terca" ? "Terça" : `${day}`} fazer ${back} (Back Day)`}
+            `${
+              day === "Terca" ? "Terça" : `${day}`
+            } você vai fazer ${back} (Back Day)`}
         </Title>
       </BoxTitle>
       <Box>
