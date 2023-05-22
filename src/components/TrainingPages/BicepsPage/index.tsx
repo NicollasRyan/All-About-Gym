@@ -1,5 +1,12 @@
 import { useLocation, useParams } from "react-router-dom";
-import { Box, BoxTitle, Content, Title, TrainingText } from "./styled";
+import {
+  Box,
+  BoxTitle,
+  BoxTraining,
+  Content,
+  Title,
+  TrainingText,
+} from "./styled";
 
 interface BicepsProps {
   biceps?: string;
@@ -38,15 +45,43 @@ export function BicepsPage({
             `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${biceps}`}
         </Title>
       </BoxTitle>
-      <Box>
-        <TrainingText>{dumbbellThread}</TrainingText>
-        <TrainingText>{dumbbellHammer}</TrainingText>
-        <TrainingText>{wBar}</TrainingText>
-        <TrainingText>{threadRoper}</TrainingText>
-        <TrainingText>{inclineBenchThread}</TrainingText>
-        <TrainingText>{scottBank}</TrainingText>
-        <TrainingText>{concentratedThread}</TrainingText>
-      </Box>
+      <BoxTraining>
+        {dumbbellThread && (
+          <Box>
+            <TrainingText>{dumbbellThread}</TrainingText>
+          </Box>
+        )}
+        {dumbbellHammer && (
+          <Box>
+            <TrainingText>{dumbbellHammer}</TrainingText>
+          </Box>
+        )}
+        {wBar && (
+          <Box>
+            <TrainingText>{wBar}</TrainingText>
+          </Box>
+        )}
+        {threadRoper && (
+          <Box>
+            <TrainingText>{threadRoper}</TrainingText>
+          </Box>
+        )}
+        {inclineBenchThread && (
+          <Box>
+            <TrainingText>{inclineBenchThread}</TrainingText>
+          </Box>
+        )}
+        {scottBank && (
+          <Box>
+            <TrainingText>{scottBank}</TrainingText>
+          </Box>
+        )}
+        {concentratedThread && (
+          <Box>
+            <TrainingText>{concentratedThread}</TrainingText>
+          </Box>
+        )}
+      </BoxTraining>
     </Content>
   );
 }

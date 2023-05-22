@@ -1,5 +1,12 @@
 import { useLocation, useParams } from "react-router-dom";
-import { Box, BoxTitle, Content, Title, TrainingText } from "./styled";
+import {
+  Box,
+  BoxTitle,
+  BoxTraining,
+  Content,
+  Title,
+  TrainingText,
+} from "./styled";
 
 interface SholderProps {
   sholder?: string;
@@ -40,15 +47,43 @@ export function ShoulderPage({
             } você vai fazer ${sholder} (Shoulder Day)`}
         </Title>
       </BoxTitle>
-      <Box>
-        <TrainingText>{sideRaise}</TrainingText>
-        <TrainingText>{frontElevation}</TrainingText>
-        <TrainingText>{development}</TrainingText>
-        <TrainingText>{arnoldDevelopment}</TrainingText>
-        <TrainingText>{crossLateralRaise}</TrainingText>
-        <TrainingText>{inclinedLateralRaise}</TrainingText>
-        <TrainingText>{reverseCrucifix}</TrainingText>
-      </Box>
+      <BoxTraining>
+        {sideRaise && (
+          <Box>
+            <TrainingText>{sideRaise}</TrainingText>
+          </Box>
+        )}
+        {frontElevation && (
+          <Box>
+            <TrainingText>{frontElevation}</TrainingText>
+          </Box>
+        )}
+        {development && (
+          <Box>
+            <TrainingText>{development}</TrainingText>
+          </Box>
+        )}
+        {arnoldDevelopment && (
+          <Box>
+            <TrainingText>{arnoldDevelopment}</TrainingText>
+          </Box>
+        )}
+        {crossLateralRaise && (
+          <Box>
+            <TrainingText>{crossLateralRaise}</TrainingText>
+          </Box>
+        )}
+        {inclinedLateralRaise && (
+          <Box>
+            <TrainingText>{inclinedLateralRaise}</TrainingText>
+          </Box>
+        )}
+        {reverseCrucifix && (
+          <Box>
+            <TrainingText>{reverseCrucifix}</TrainingText>
+          </Box>
+        )}
+      </BoxTraining>
     </Content>
   );
 }

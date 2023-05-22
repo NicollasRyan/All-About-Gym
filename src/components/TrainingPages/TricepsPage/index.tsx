@@ -1,5 +1,12 @@
 import { useLocation, useParams } from "react-router-dom";
-import { Box, BoxTitle, Content, Title, TrainingText } from "./styled";
+import {
+  Box,
+  BoxTitle,
+  BoxTraining,
+  Content,
+  Title,
+  TrainingText,
+} from "./styled";
 
 interface TricepsProps {
   triceps?: string;
@@ -36,15 +43,38 @@ export function TricepsPage({
             `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${triceps}`}
         </Title>
       </BoxTitle>
-      <Box>
-        <TrainingText>{barTriceps}</TrainingText>
-        <TrainingText>{ropeTriceps}</TrainingText>
-        <TrainingText>{french}</TrainingText>
-        <TrainingText>{closedBenchPress}</TrainingText>
-        <TrainingText>{closedBenchPress}</TrainingText>
-        <TrainingText>{forehead}</TrainingText>
-        <TrainingText>{foreheadPulley}</TrainingText>
-      </Box>
+      <BoxTraining>
+        {barTriceps && (
+          <Box>
+            <TrainingText>{barTriceps}</TrainingText>
+          </Box>
+        )}
+        {ropeTriceps && (
+          <Box>
+            <TrainingText>{ropeTriceps}</TrainingText>
+          </Box>
+        )}
+        {french && (
+          <Box>
+            <TrainingText>{french}</TrainingText>
+          </Box>
+        )}
+        {closedBenchPress && (
+          <Box>
+            <TrainingText>{closedBenchPress}</TrainingText>
+          </Box>
+        )}
+        {forehead && (
+          <Box>
+            <TrainingText>{forehead}</TrainingText>
+          </Box>
+        )}
+        {foreheadPulley && (
+          <Box>
+            <TrainingText>{foreheadPulley}</TrainingText>
+          </Box>
+        )}
+      </BoxTraining>
     </Content>
   );
 }

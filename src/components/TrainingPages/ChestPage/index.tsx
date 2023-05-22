@@ -1,5 +1,12 @@
 import { useLocation } from "react-router-dom";
-import { Box, BoxTitle, Content, Title, TrainingText } from "./styled";
+import {
+  Box,
+  BoxTitle,
+  BoxTraining,
+  Content,
+  Title,
+  TrainingText,
+} from "./styled";
 
 interface ChestProps {
   chest?: string;
@@ -40,15 +47,43 @@ export function ChestPage({
             } você vai fazer ${chest} (Chest Day)`}
         </Title>
       </BoxTitle>
-      <Box>
-        <TrainingText>{benchPress}</TrainingText>
-        <TrainingText>{inclineBenchPress}</TrainingText>
-        <TrainingText>{peckDeck}</TrainingText>
-        <TrainingText>{benchPressSitting}</TrainingText>
-        <TrainingText>{highCrossOver}</TrainingText>
-        <TrainingText>{crossOverMedium}</TrainingText>
-        <TrainingText>{crossOverBass}</TrainingText>
-      </Box>
+      <BoxTraining>
+        {benchPress && (
+          <Box>
+            <TrainingText>{benchPress}</TrainingText>
+          </Box>
+        )}
+        {inclineBenchPress && (
+          <Box>
+            <TrainingText>{inclineBenchPress}</TrainingText>
+          </Box>
+        )}
+        {peckDeck && (
+          <Box>
+            <TrainingText>{peckDeck}</TrainingText>
+          </Box>
+        )}
+        {benchPressSitting && (
+          <Box>
+            <TrainingText>{benchPressSitting}</TrainingText>
+          </Box>
+        )}
+        {highCrossOver && (
+          <Box>
+            <TrainingText>{highCrossOver}</TrainingText>
+          </Box>
+        )}
+        {crossOverMedium && (
+          <Box>
+            <TrainingText>{crossOverMedium}</TrainingText>
+          </Box>
+        )}
+        {crossOverBass && (
+          <Box>
+            <TrainingText>{crossOverBass}</TrainingText>
+          </Box>
+        )}
+      </BoxTraining>
     </Content>
   );
 }

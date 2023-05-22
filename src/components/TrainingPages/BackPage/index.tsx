@@ -1,5 +1,12 @@
 import { useLocation } from "react-router-dom";
-import { Box, BoxTitle, Content, Title, TrainingText } from "./styled";
+import {
+  Box,
+  BoxTitle,
+  BoxTraining,
+  Content,
+  Title,
+  TrainingText,
+} from "./styled";
 
 interface BackProps {
   back?: string;
@@ -46,18 +53,59 @@ export function BackPage({
             } você vai fazer ${back} (Back Day)`}
         </Title>
       </BoxTitle>
-      <Box>
-        <TrainingText>{bentOverRow}</TrainingText>
-        <TrainingText>{frontHighPull}</TrainingText>
-        <TrainingText>{benchRow}</TrainingText>
-        <TrainingText>{pullclosed}</TrainingText>
-        <TrainingText>{pullTriangle}</TrainingText>
-        <TrainingText>{lowRow}</TrainingText>
-        <TrainingText>{rowingHorse}</TrainingText>
-        <TrainingText>{handsaw}</TrainingText>
-        <TrainingText>{pulldown}</TrainingText>
-        <TrainingText>{earth}</TrainingText>
-      </Box>
+
+      <BoxTraining>
+        {bentOverRow && (
+          <Box>
+            <TrainingText>{bentOverRow}</TrainingText>
+          </Box>
+        )}
+        {frontHighPull && (
+          <Box>
+            <TrainingText>{frontHighPull}</TrainingText>
+          </Box>
+        )}
+        {benchRow && (
+          <Box>
+            <TrainingText>{benchRow}</TrainingText>
+          </Box>
+        )}
+        {handsaw && (
+          <Box>
+            <TrainingText>{handsaw}</TrainingText>
+          </Box>
+        )}
+        {pullTriangle && (
+          <Box>
+            <TrainingText>{pullTriangle}</TrainingText>
+          </Box>
+        )}
+        {lowRow && (
+          <Box>
+            <TrainingText>{lowRow}</TrainingText>
+          </Box>
+        )}
+        {rowingHorse && (
+          <Box>
+            <TrainingText>{rowingHorse}</TrainingText>
+          </Box>
+        )}
+        {pullclosed && (
+          <Box>
+            <TrainingText>{pullclosed}</TrainingText>
+          </Box>
+        )}
+        {pulldown && (
+          <Box>
+            <TrainingText>{pulldown}</TrainingText>
+          </Box>
+        )}
+        {earth && (
+          <Box>
+            <TrainingText>{earth}</TrainingText>
+          </Box>
+        )}
+      </BoxTraining>
     </Content>
   );
 }

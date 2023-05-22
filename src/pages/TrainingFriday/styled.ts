@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import styled from "styled-components";
 
 export const ContainerWeek = styled(Container)`
-  padding-top: 100px;
+  margin-top: 100px;
 `;
 
 export const Title = styled.h1``;
