@@ -11,7 +11,7 @@ export const BoxTitle = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 20px;
+  font-size: 30px;
 `;
 
 export const BoxTraining = styled.div``;
