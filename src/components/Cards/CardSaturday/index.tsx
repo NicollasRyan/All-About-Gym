@@ -6,10 +6,10 @@ import {
 } from "@mui/material";
 import { CardContainer, Text, BoxTitle, TrainingText } from "./styled";
 import { useContext } from "react";
-import { FridayContext } from "../../../context/fridayContext";
+import { SaturdayContext } from "../../../context/saturdayContext";
 
 export function CardSaturday() {
-  const { trainingWeeks } = useContext(FridayContext);
+  const { trainingWeeks } = useContext(SaturdayContext);
 
   return (
     <Container>
@@ -23,11 +23,10 @@ export function CardSaturday() {
             <>
               {trainingWeeks.map((training) => (
                 <TrainingText key={training.id}>
-                  {training.back?.length === 1 && "Costas"}{" "}
-                  {training.biceps?.length === 1 && "Biceps"}
-                  {training.triceps?.length === 1 && "Triceps"}
-                  {training.sholder?.length === 1 && "Ombro"}
-                  {training.leg?.length === 1 && "Perna"}
+                  {training?.back && "Costas"} {training?.biceps && "Biceps"}
+                  {training?.triceps && "Triceps"}
+                  {training?.sholder && "Ombro"}
+                  {training?.leg && "Perna"}
                 </TrainingText>
               ))}
             </>{" "}
