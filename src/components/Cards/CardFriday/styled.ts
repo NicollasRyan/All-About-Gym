@@ -6,7 +6,7 @@ export const Text = styled.h2`
 `;
 
 export const TrainingText = styled.p`
-  color: #000;
+  color: black;
 `;
 
 export const CardContainer = styled(Card)`
