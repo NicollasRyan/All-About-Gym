@@ -29,24 +29,8 @@ export function ChestPage({
   crossOverMedium,
   crossOverBass,
 }: ChestProps) {
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  const trimmedPathname = pathname.replace(/^\/+/g, "");
-
-  const urlParts = trimmedPathname.split("/");
-  const day = urlParts[urlParts.length - 1];
-
   return (
     <Content>
-      <BoxTitle>
-        <Title>
-          {chest &&
-            `${
-              day === "Terca" ? "Terça" : `${day}`
-            } você vai fazer ${chest} (Chest Day)`}
-        </Title>
-      </BoxTitle>
       <BoxTraining>
         {benchPress && (
           <Box>

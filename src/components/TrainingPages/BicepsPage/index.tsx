@@ -29,22 +29,8 @@ export function BicepsPage({
   scottBank,
   concentratedThread,
 }: BicepsProps) {
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  const trimmedPathname = pathname.replace(/^\/+/g, "");
-
-  const urlParts = trimmedPathname.split("/");
-  const day = urlParts[urlParts.length - 1];
-
   return (
     <Content>
-      <BoxTitle>
-        <Title>
-          {biceps &&
-            `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${biceps}`}
-        </Title>
-      </BoxTitle>
       <BoxTraining>
         {dumbbellThread && (
           <Box>

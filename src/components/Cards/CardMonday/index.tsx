@@ -6,10 +6,10 @@ import {
 } from "@mui/material";
 import { CardContainer, Text, BoxTitle, TrainingText } from "./styled";
 import { useContext } from "react";
-import { FridayContext } from "../../../context/fridayContext";
+import { MondayContext } from "../../../context/mondayContext";
 
 export function CardMonday() {
-  const { trainingWeeks } = useContext(FridayContext);
+  const { trainingWeeks } = useContext(MondayContext);
 
   return (
     <Container>

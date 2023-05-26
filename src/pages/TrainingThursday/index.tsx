@@ -14,6 +14,7 @@ import { LegPage } from "../../components/TrainingPages/LegPage";
 import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
 import { BackPage } from "../../components/TrainingPages/BackPage";
+import { AddTraining } from "./Modals/AddTraining";
 
 export function TrainingThursday() {
   const { trainingWeek } = useParams();
@@ -25,6 +26,7 @@ export function TrainingThursday() {
   const [openTriceps, setOpenTriceps] = useState(false);
   const [openBiceps, setOpenBiceps] = useState(false);
   const [openLeg, setOpenLeg] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleOpenShoulder = () => setOpenShoulder(true);
   const handleOpenChest = () => setOpenChest(true);
@@ -32,6 +34,7 @@ export function TrainingThursday() {
   const handleOpenTriceps = () => setOpenTriceps(true);
   const handleOpenBiceps = () => setOpenBiceps(true);
   const handleOpenLeg = () => setOpenLeg(true);
+  const handleOpen = () => setOpen(true);
 
   const handleCloseShoulder = () => setOpenShoulder(false);
   const handleCloseChest = () => setOpenChest(false);
@@ -39,6 +42,7 @@ export function TrainingThursday() {
   const handleCloseTriceps = () => setOpenTriceps(false);
   const handleCloseBiceps = () => setOpenBiceps(false);
   const handleCloseLeg = () => setOpenLeg(false);
+  const handleClose = () => setOpen(false);
 
   return (
     <ContainerWeek>
@@ -71,90 +75,95 @@ export function TrainingThursday() {
           <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
         </>
       ) : (
-        trainingWeeks.map((training) => (
-          <div key={training.id}>
-            {training.back && (
-              <BackPage
-                back={training.back}
-                bentOverRow={training.bentOverRow}
-                frontHighPull={training.frontHighPull}
-                benchRow={training.benchRow}
-                pullclosed={training.pullclosed}
-                pullTriangle={training.pullTriangle}
-                lowRow={training.lowRow}
-                rowingHorse={training.rowingHorse}
-                handsaw={training.handsaw}
-                pulldown={training.pulldown}
-                earth={training.earth}
-              />
-            )}
-            {training.biceps && (
-              <BicepsPage
-                biceps={training.biceps}
-                dumbbellThread={training.dumbbellThread}
-                dumbbellHammer={training.dumbbellHammer}
-                wBar={training.wBar}
-                threadRoper={training.threadRoper}
-                inclineBenchThread={training.inclineBenchThread}
-                scottBank={training.scottBank}
-                concentratedThread={training.concentratedThread}
-              />
-            )}
-            {training.chest && (
-              <ChestPage
-                chest={training.chest}
-                benchPress={training.benchPress}
-                inclineBenchPress={training.inclineBenchPress}
-                peckDeck={training.peckDeck}
-                benchPressSitting={training.benchPressSitting}
-                highCrossOver={training.highCrossOver}
-                crossOverMedium={training.crossOverMedium}
-                crossOverBass={training.crossOverBass}
-              />
-            )}
-            {training.leg && (
-              <LegPage
-                leg={training.leg}
-                barbellSquat={training.barbellSquat}
-                sink={training.sink}
-                rack={training.rack}
-                legPress={training.legPress}
-                bugaro={training.bugaro}
-                flexorTable={training.flexorTable}
-                flexorChair={training.flexorChair}
-                extensionChair={training.extensionChair}
-                abductor={training.abductor}
-                adductor={training.adductor}
-                pelvicElevation={training.pelvicElevation}
-                kick={training.kick}
-              />
-            )}
-            {training.sholder && (
-              <ShoulderPage
-                sholder={training.sholder}
-                sideRaise={training.sideRaise}
-                frontElevation={training.frontElevation}
-                development={training.development}
-                arnoldDevelopment={training.arnoldDevelopment}
-                crossLateralRaise={training.crossLateralRaise}
-                inclinedLateralRaise={training.inclinedLateralRaise}
-                reverseCrucifix={training.reverseCrucifix}
-              />
-            )}
-            {training.triceps && (
-              <TricepsPage
-                triceps={training.triceps}
-                barTriceps={training.barTriceps}
-                ropeTriceps={training.ropeTriceps}
-                french={training.french}
-                closedBenchPress={training.closedBenchPress}
-                forehead={training.forehead}
-                foreheadPulley={training.foreheadPulley}
-              />
-            )}
-          </div>
-        ))
+        <div>
+          <Title>Na quinta você vai treinar:</Title>
+          {trainingWeeks.map((training) => (
+            <div key={training.id}>
+              {training.back && (
+                <BackPage
+                  back={training.back}
+                  bentOverRow={training.bentOverRow}
+                  frontHighPull={training.frontHighPull}
+                  benchRow={training.benchRow}
+                  pullclosed={training.pullclosed}
+                  pullTriangle={training.pullTriangle}
+                  lowRow={training.lowRow}
+                  rowingHorse={training.rowingHorse}
+                  handsaw={training.handsaw}
+                  pulldown={training.pulldown}
+                  earth={training.earth}
+                />
+              )}
+              {training.biceps && (
+                <BicepsPage
+                  biceps={training.biceps}
+                  dumbbellThread={training.dumbbellThread}
+                  dumbbellHammer={training.dumbbellHammer}
+                  wBar={training.wBar}
+                  threadRoper={training.threadRoper}
+                  inclineBenchThread={training.inclineBenchThread}
+                  scottBank={training.scottBank}
+                  concentratedThread={training.concentratedThread}
+                />
+              )}
+              {training.chest && (
+                <ChestPage
+                  chest={training.chest}
+                  benchPress={training.benchPress}
+                  inclineBenchPress={training.inclineBenchPress}
+                  peckDeck={training.peckDeck}
+                  benchPressSitting={training.benchPressSitting}
+                  highCrossOver={training.highCrossOver}
+                  crossOverMedium={training.crossOverMedium}
+                  crossOverBass={training.crossOverBass}
+                />
+              )}
+              {training.leg && (
+                <LegPage
+                  leg={training.leg}
+                  barbellSquat={training.barbellSquat}
+                  sink={training.sink}
+                  rack={training.rack}
+                  legPress={training.legPress}
+                  bugaro={training.bugaro}
+                  flexorTable={training.flexorTable}
+                  flexorChair={training.flexorChair}
+                  extensionChair={training.extensionChair}
+                  abductor={training.abductor}
+                  adductor={training.adductor}
+                  pelvicElevation={training.pelvicElevation}
+                  kick={training.kick}
+                />
+              )}
+              {training.sholder && (
+                <ShoulderPage
+                  sholder={training.sholder}
+                  sideRaise={training.sideRaise}
+                  frontElevation={training.frontElevation}
+                  development={training.development}
+                  arnoldDevelopment={training.arnoldDevelopment}
+                  crossLateralRaise={training.crossLateralRaise}
+                  inclinedLateralRaise={training.inclinedLateralRaise}
+                  reverseCrucifix={training.reverseCrucifix}
+                />
+              )}
+              {training.triceps && (
+                <TricepsPage
+                  triceps={training.triceps}
+                  barTriceps={training.barTriceps}
+                  ropeTriceps={training.ropeTriceps}
+                  french={training.french}
+                  closedBenchPress={training.closedBenchPress}
+                  forehead={training.forehead}
+                  foreheadPulley={training.foreheadPulley}
+                />
+              )}
+            </div>
+          ))}
+          <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+        </div>
       )}
+      <AddTraining open={open} handleClose={handleClose} />
     </ContainerWeek>
   );
 }

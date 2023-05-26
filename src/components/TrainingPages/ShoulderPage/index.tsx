@@ -29,24 +29,8 @@ export function ShoulderPage({
   inclinedLateralRaise,
   reverseCrucifix,
 }: SholderProps) {
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  const trimmedPathname = pathname.replace(/^\/+/g, "");
-
-  const urlParts = trimmedPathname.split("/");
-  const day = urlParts[urlParts.length - 1];
-
   return (
     <Content>
-      <BoxTitle>
-        <Title>
-          {sholder &&
-            `${
-              day === "Terca" ? "Terça" : `${day}`
-            } você vai fazer ${sholder} (Shoulder Day)`}
-        </Title>
-      </BoxTitle>
       <BoxTraining>
         {sideRaise && (
           <Box>

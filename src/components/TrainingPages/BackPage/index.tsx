@@ -35,25 +35,8 @@ export function BackPage({
   pulldown,
   earth,
 }: BackProps) {
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  const trimmedPathname = pathname.replace(/^\/+/g, "");
-
-  const urlParts = trimmedPathname.split("/");
-  const day = urlParts[urlParts.length - 1];
-
   return (
     <Content>
-      <BoxTitle>
-        <Title>
-          {back &&
-            `${
-              day === "Terca" ? "Terça" : `${day}`
-            } você vai fazer ${back} (Back Day)`}
-        </Title>
-      </BoxTitle>
-
       <BoxTraining>
         {bentOverRow && (
           <Box>

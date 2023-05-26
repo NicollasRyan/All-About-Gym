@@ -27,22 +27,8 @@ export function TricepsPage({
   forehead,
   foreheadPulley,
 }: TricepsProps) {
-  const location = useLocation();
-  const pathname = location.pathname;
-
-  const trimmedPathname = pathname.replace(/^\/+/g, "");
-
-  const urlParts = trimmedPathname.split("/");
-  const day = urlParts[urlParts.length - 1];
-
   return (
     <Content>
-      <BoxTitle>
-        <Title>
-          {triceps &&
-            `${day === "Terca" ? "Terça" : `${day}`} você vai fazer ${triceps}`}
-        </Title>
-      </BoxTitle>
       <BoxTraining>
         {barTriceps && (
           <Box>

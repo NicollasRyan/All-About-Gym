@@ -1,4 +1,4 @@
-import { DialogActions, Button, Dialog } from "@mui/material";
+import { Button, Dialog } from "@mui/material";
 
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import {
@@ -17,8 +17,6 @@ type FunctioType = {
 
 export function Back({ openBack, handleClose }: FunctioType) {
   const { createTrainingWeeks } = useContext(FridayContext);
-
-  const [back, setBack] = useState("");
 
   const [frontHighPull, setFrontHighPull] = useState("");
   const [benchRow, setBenchRow] = useState("");
