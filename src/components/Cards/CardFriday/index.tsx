@@ -28,6 +28,7 @@ export function CardFriday() {
             <>
               {trainingWeeks.map((training) => (
                 <TrainingText key={training.id}>
+                  {training?.chest && "Peito"}
                   {training?.back && "Costas"} {training?.biceps && "Biceps"}
                   {training?.triceps && "Triceps"}
                   {training?.sholder && "Ombro"}

@@ -69,7 +69,7 @@ export function AddTraining({ open, handleClose }: ModalProps) {
           )}
         </ContentWorkouts>
         <DialogActions>
-          <Button onClick={handleClose}>Cancelar</Button>
+          <Button onClick={handleClose}>Fechar</Button>
         </DialogActions>
         <Shoulder
           openShoulder={openShoulder}

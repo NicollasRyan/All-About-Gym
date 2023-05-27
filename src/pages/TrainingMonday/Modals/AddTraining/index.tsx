@@ -30,7 +30,9 @@ export function AddTraining({ open, handleClose }: ModalProps) {
   const [openBiceps, setOpenBiceps] = useState(false);
   const [openLeg, setOpenLeg] = useState(false);
 
-  const handleOpenShoulder = () => setOpenShoulder(true);
+  const handleOpenShoulder = () => {
+    setOpenShoulder(true);
+  };
   const handleOpenChest = () => setOpenChest(true);
   const handleOpenBack = () => setOpenBack(true);
   const handleOpenTriceps = () => setOpenTriceps(true);
@@ -69,7 +71,7 @@ export function AddTraining({ open, handleClose }: ModalProps) {
           )}
         </ContentWorkouts>
         <DialogActions>
-          <Button onClick={handleClose}>Cancelar</Button>
+          <Button onClick={handleClose}>Fechar</Button>
         </DialogActions>
         <Shoulder
           openShoulder={openShoulder}
