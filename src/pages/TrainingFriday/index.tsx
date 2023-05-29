@@ -21,6 +21,8 @@ import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { LegPage } from "../../components/TrainingPages/LegPage";
 import { ShoulderPage } from "../../components/TrainingPages/ShoulderPage";
 import { TricepsPage } from "../../components/TrainingPages/TricepsPage";
+import { Rest } from "./Modals/Rest";
+import { RestPage } from "../../components/TrainingPages/RestPage";
 
 interface Props {
   Training: () => void;
@@ -28,7 +30,6 @@ interface Props {
 }
 
 export function TrainingFriday() {
-  const { trainingWeek } = useParams();
   const { trainingWeeks } = useContext(FridayContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
@@ -37,7 +38,7 @@ export function TrainingFriday() {
   const [openTriceps, setOpenTriceps] = useState(false);
   const [openBiceps, setOpenBiceps] = useState(false);
   const [openLeg, setOpenLeg] = useState(false);
-  const [openrest, setOpenRest] = useState(false);
+  const [openRest, setOpenRest] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleOpenShoulder = () => setOpenShoulder(true);
@@ -81,10 +82,13 @@ export function TrainingFriday() {
           <Triceps openTriceps={openTriceps} handleClose={handleCloseTriceps} />
           <Biceps openBiceps={openBiceps} handleClose={handleCloseBiceps} />
           <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
+          <Rest openRest={openRest} handleClose={handleCloseRest} />
         </>
       ) : (
         <div>
-          <Title>Na sexta você vai treinar:</Title>
+          {trainingWeeks.some((training) => !training.rest) && (
+            <Title>Na sexta você vai treinar:</Title>
+          )}
           {trainingWeeks.map((training) => (
             <div key={training.id}>
               {training.back && (
@@ -166,9 +170,12 @@ export function TrainingFriday() {
                   foreheadPulley={training.foreheadPulley}
                 />
               )}
+              {training.rest && <RestPage />}
             </div>
           ))}
-          <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+          {trainingWeeks.some((training) => !training.rest) && (
+            <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+          )}
         </div>
       )}
       <AddTraining open={open} handleClose={handleClose} />

@@ -70,6 +70,8 @@ interface TrainingProps {
   closedBenchPress?: string;
   forehead?: string;
   foreheadPulley?: string;
+  // Rest
+  rest?: string;
 }
 
 interface workoutInputProps {
@@ -134,6 +136,8 @@ interface workoutInputProps {
   closedBenchPress?: string;
   forehead?: string;
   foreheadPulley?: string;
+  // Rest
+  rest?: string;
 }
 
 interface workoutProviderProps {

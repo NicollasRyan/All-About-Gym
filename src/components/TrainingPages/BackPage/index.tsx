@@ -1,12 +1,4 @@
-import { useLocation } from "react-router-dom";
-import {
-  Box,
-  BoxTitle,
-  BoxTraining,
-  Content,
-  Title,
-  TrainingText,
-} from "./styled";
+import { Box, BoxTraining, Content, TrainingText } from "./styled";
 
 interface BackProps {
   back?: string;
@@ -23,7 +15,6 @@ interface BackProps {
 }
 
 export function BackPage({
-  back,
   bentOverRow,
   frontHighPull,
   benchRow,

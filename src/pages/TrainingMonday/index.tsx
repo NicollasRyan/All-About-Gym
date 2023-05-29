@@ -15,9 +15,10 @@ import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
 import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { LegPage } from "../../components/TrainingPages/LegPage";
 import { AddTraining } from "./Modals/AddTraining";
+import { Rest } from "./Modals/Rest";
+import { RestPage } from "../../components/TrainingPages/RestPage";
 
 export function TrainingMonday() {
-  const { trainingWeek } = useParams();
   const { trainingWeeks } = useContext(MondayContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
@@ -26,6 +27,7 @@ export function TrainingMonday() {
   const [openTriceps, setOpenTriceps] = useState(false);
   const [openBiceps, setOpenBiceps] = useState(false);
   const [openLeg, setOpenLeg] = useState(false);
+  const [openRest, setOpenRest] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleOpenShoulder = () => setOpenShoulder(true);
@@ -34,6 +36,7 @@ export function TrainingMonday() {
   const handleOpenTriceps = () => setOpenTriceps(true);
   const handleOpenBiceps = () => setOpenBiceps(true);
   const handleOpenLeg = () => setOpenLeg(true);
+  const handleOpenRest = () => setOpenRest(true);
   const handleOpen = () => setOpen(true);
 
   const handleCloseShoulder = () => setOpenShoulder(false);
@@ -42,6 +45,7 @@ export function TrainingMonday() {
   const handleCloseTriceps = () => setOpenTriceps(false);
   const handleCloseBiceps = () => setOpenBiceps(false);
   const handleCloseLeg = () => setOpenLeg(false);
+  const handleCloseRest = () => setOpenRest(false);
   const handleClose = () => setOpen(false);
 
   return (
@@ -51,18 +55,12 @@ export function TrainingMonday() {
           <Title>O que você vai treinar Sengunda?</Title>
           <ContentWorkouts>
             <Button onClick={handleOpenShoulder}>Ombro</Button>
-
             <Button onClick={handleOpenChest}>Peito</Button>
-
             <Button onClick={handleOpenBack}>Costas</Button>
-
             <Button onClick={handleOpenTriceps}>Tricpes</Button>
-
             <Button onClick={handleOpenBiceps}>Bicpes</Button>
-
-            <Button onClick={handleOpenLeg}>Perna </Button>
-
-            <Button>Descanso</Button>
+            <Button onClick={handleOpenLeg}>Perna</Button>
+            <Button onClick={handleOpenRest}>Descanso</Button>
           </ContentWorkouts>
           <Shoulder
             openShoulder={openShoulder}
@@ -73,10 +71,13 @@ export function TrainingMonday() {
           <Triceps openTriceps={openTriceps} handleClose={handleCloseTriceps} />
           <Biceps openBiceps={openBiceps} handleClose={handleCloseBiceps} />
           <Leg openLeg={openLeg} handleClose={handleCloseLeg} />
+          <Rest openRest={openRest} handleClose={handleCloseRest} />
         </>
       ) : (
         <div>
-          <Title>Na segunda você vai treinar:</Title>
+          {trainingWeeks.some((training) => !training.rest) && (
+            <Title>Na Sabado você vai treinar:</Title>
+          )}
           {trainingWeeks.map((training) => (
             <div key={training.id}>
               {training.back && (
@@ -158,9 +159,12 @@ export function TrainingMonday() {
                   foreheadPulley={training.foreheadPulley}
                 />
               )}
+              {training.rest && <RestPage />}
             </div>
           ))}
-          <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+          {trainingWeeks.some((training) => !training.rest) && (
+            <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+          )}
         </div>
       )}
       <AddTraining open={open} handleClose={handleClose} />
