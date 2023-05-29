@@ -10,8 +10,8 @@ export const TrainingText = styled.p`
 `;
 
 export const CardContainer = styled(Card)`
-  width: 640px;
-  height: 250px;
+  max-width: 640px;
+  max-height: 250px;
   margin-bottom: 35px;
 `;
 
