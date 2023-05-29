@@ -28,6 +28,7 @@ export function CardTuesday() {
                   {training?.triceps && "Triceps"}
                   {training?.sholder && "Ombro"}
                   {training?.leg && "Perna"}
+                  {training?.rest && "Descansar"}
                 </TrainingText>
               ))}
             </>
