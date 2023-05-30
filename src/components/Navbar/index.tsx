@@ -44,6 +44,9 @@ export function Navbar() {
             <Box sx={{ p: 1 }}>
               <NavLink to="/nutrition">Alimentação</NavLink>
             </Box>
+            <Box sx={{ p: 1 }}>
+              <NavLink to="/workouts">Treinos</NavLink>
+            </Box>
           </PopperContent>
         </Box>
       </ContentBar>

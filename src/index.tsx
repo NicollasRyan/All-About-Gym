@@ -25,6 +25,8 @@ import { SundayProvider } from "./context/sundayContext";
 import { ThursdayProvider } from "./context/thursdayContext";
 import { TuesdayProvider } from "./context/tuesdayContext";
 import { WednesdayProvider } from "./context/wednesdayContext";
+import { Workouts } from "./pages/Workouts";
+import { BackTraining } from "./pages/Workouts/BackTraining";
 
 createServer({
   models: {
@@ -105,6 +107,11 @@ root.render(
                         <Route
                           path="/createworkout/domingo"
                           element={<TrainingSunday />}
+                        />
+                        <Route path="/workouts" element={<Workouts />} />
+                        <Route
+                          path="/workouts/back"
+                          element={<BackTraining />}
                         />
                       </Route>
                     </Routes>

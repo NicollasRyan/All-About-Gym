@@ -11,7 +11,7 @@ export const TrainingText = styled.p`
 
 export const CardContainer = styled(Card)`
   max-width: 640px;
-  max-height: 250px;
+  height: 200px;
   margin-bottom: 35px;
 `;
 

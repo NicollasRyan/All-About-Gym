@@ -1,4 +1,3 @@
-import { Container } from "@mui/material";
 import { Content, Title } from "./styled";
 import { CardMonday } from "../../components/Cards/CardMonday";
 import { Link } from "react-router-dom";

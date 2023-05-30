@@ -3,8 +3,6 @@ import {
   Content,
   Text,
   Title,
-  ContainerList,
-  ContentList,
   ContainerText,
   Img,
   BoxImg,
