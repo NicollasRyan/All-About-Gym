@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import gym from "../img/gym.jpg";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -10,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-    background-color: #202124;
-    
+    background-image: url(${gym}); 
+     background-size: cover;
 }
 `;

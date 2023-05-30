@@ -1,11 +1,18 @@
+import { Container } from "@mui/material";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ContainerHome = styled(Container)`
+  margin-top: 200px;
+
+  background-color: #202124;
+  padding: 35px 0 35px 0;
+  border-radius: 5px;
+`;
+
+export const ContainerBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  margin-top: 200px;
 `;
 
 export const ContainerImg = styled.div`

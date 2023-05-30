@@ -2,15 +2,18 @@ import { Container } from "@mui/material";
 import styled from "styled-components";
 
 export const Title = styled.h1`
+  color: #000;
+  max-width: 370px;
+  background-color: white;
   margin-bottom: 50px;
 `;
 
 export const Content = styled(Container)`
-  padding-top: 100px;
+  margin-top: 100px;
 `;
 
 export const ContainerText = styled(Container)`
-  background-color: #757575;
+  background-color: #202124;
   border-radius: 10px;
 
   padding: 25px 0 25px 0;
@@ -29,23 +32,26 @@ export const ContainerList = styled.ol`
 `;
 
 export const ContentList = styled.li`
-  padding: 8px 0 8px 0;
+  margin: 8px 0 8px 0;
 `;
 
 export const Img = styled.img`
-  width: 450px;
+  max-width: 450px;
+  min-width: 10px;
 `;
 
 export const ImgProteina = styled.img`
-  width: 550px;
+  max-width: 550px;
+  min-width: 10px;
 `;
 
 export const ImgLeg = styled.img`
-  width: 500px;
+  max-width: 500px;
+  min-width: 10px;
 `;
 
 export const BoxImg = styled.div`
-  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
   display: flex;
   justify-content: center;
 `;
