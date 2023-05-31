@@ -32,3 +32,5 @@ export const Button = styled.button`
     background-color: #b7b7b7;
   }
 `;
+
+export const ContentButtons = styled.div``;

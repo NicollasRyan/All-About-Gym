@@ -11,7 +11,6 @@ import {
   ImgProteina,
   ImgCutting,
   BoxTextDry,
-  BoxImgCutting,
 } from "./styled";
 
 import Arnold from "../../img/Arnold.jpg";
@@ -175,9 +174,9 @@ export function Nutrition() {
             treinamento para evitar a desidratação.
           </ContentList>
         </ContainerList>
-        <BoxImgCutting>
+        <BoxImg>
           <ImgCutting src={CuttingCbum} />
-        </BoxImgCutting>
+        </BoxImg>
       </ContainerText>
     </Content>
   );

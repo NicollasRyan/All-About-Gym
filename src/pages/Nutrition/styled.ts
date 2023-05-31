@@ -60,7 +60,3 @@ export const BoxImg = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-export const BoxImgCutting = styled.div`
-  margin: 20px 0 20px 0;
-`;

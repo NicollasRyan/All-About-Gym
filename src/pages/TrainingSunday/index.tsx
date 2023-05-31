@@ -19,7 +19,7 @@ import { Rest } from "./Modals/Rest";
 import { RestPage } from "../../components/TrainingPages/RestPage";
 
 export function TrainingSunday() {
-  const { trainingWeeks } = useContext(SundayContext);
+  const { trainingWeeks, setTrainingWeeks } = useContext(SundayContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
   const [openChest, setOpenChest] = useState(false);
@@ -47,6 +47,12 @@ export function TrainingSunday() {
   const handleCloseLeg = () => setOpenLeg(false);
   const handleCloseRest = () => setOpenRest(false);
   const handleClose = () => setOpen(false);
+
+  const removeTraining = (id: number | undefined) => {
+    const Trining = trainingWeeks.filter((training) => training.id !== id);
+
+    setTrainingWeeks(Trining);
+  };
 
   return (
     <ContainerWeek>
@@ -160,11 +166,14 @@ export function TrainingSunday() {
                 />
               )}
               {training.rest && <RestPage />}
+              <Button onClick={() => removeTraining(training.id)}>
+                Editar
+              </Button>
             </div>
           ))}
           {trainingWeeks.some((training) => !training.rest) && (
             <Button onClick={handleOpen}>Adiconar Outo treino</Button>
-          )}{" "}
+          )}
         </div>
       )}
       <AddTraining open={open} handleClose={handleClose} />

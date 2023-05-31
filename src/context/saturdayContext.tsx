@@ -146,6 +146,7 @@ interface workoutProviderProps {
 
 interface ContextData {
   trainingWeeks: TrainingProps[];
+  setTrainingWeeks: React.Dispatch<React.SetStateAction<TrainingProps[]>>;
   createTrainingWeeks: (trainingWeeks: workoutInputProps) => Promise<void>;
 }
 
@@ -168,7 +169,9 @@ export function SaturdayProvider({ children }: workoutProviderProps) {
   }
 
   return (
-    <SaturdayContext.Provider value={{ trainingWeeks, createTrainingWeeks }}>
+    <SaturdayContext.Provider
+      value={{ trainingWeeks, setTrainingWeeks, createTrainingWeeks }}
+    >
       {children}
     </SaturdayContext.Provider>
   );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ContainerHome = styled(Container)`
   margin-top: 200px;
 
-  background-color: #202124;
+  background-color: #686868;
   padding: 35px 0 35px 0;
   border-radius: 5px;
 `;

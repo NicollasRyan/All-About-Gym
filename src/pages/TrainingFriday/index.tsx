@@ -30,7 +30,7 @@ interface Props {
 }
 
 export function TrainingFriday() {
-  const { trainingWeeks } = useContext(FridayContext);
+  const { trainingWeeks, setTrainingWeeks } = useContext(FridayContext);
 
   const [openShoulder, setOpenShoulder] = useState(false);
   const [openChest, setOpenChest] = useState(false);
@@ -58,6 +58,12 @@ export function TrainingFriday() {
   const handleCloseLeg = () => setOpenLeg(false);
   const handleCloseRest = () => setOpenRest(false);
   const handleClose = () => setOpen(false);
+
+  const removeTraining = (id: number | undefined) => {
+    const Trining = trainingWeeks.filter((training) => training.id !== id);
+
+    setTrainingWeeks(Trining);
+  };
 
   return (
     <ContainerWeek>
@@ -171,6 +177,9 @@ export function TrainingFriday() {
                 />
               )}
               {training.rest && <RestPage />}
+              <Button onClick={() => removeTraining(training.id)}>
+                Editar
+              </Button>
             </div>
           ))}
           {trainingWeeks.some((training) => !training.rest) && (
