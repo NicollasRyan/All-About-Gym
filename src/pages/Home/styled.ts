@@ -1,11 +1,15 @@
 import { Container } from "@mui/material";
 import styled from "styled-components";
 
-export const ContainerHome = styled(Container)`
-  margin-top: 200px;
+export const Body = styled.body`
+  background-color: #202124;
+`;
 
-  background-color: #686868;
-  padding: 35px 0 35px 0;
+export const ContainerHome = styled(Container)`
+  margin-top: 100px;
+
+  background-color: #202124;
+  padding: 155px 0 155px 0;
   border-radius: 5px;
 `;
 

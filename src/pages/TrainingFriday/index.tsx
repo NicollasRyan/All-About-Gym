@@ -65,6 +65,17 @@ export function TrainingFriday() {
     setTrainingWeeks(Trining);
   };
 
+  const selectedTraining = trainingWeeks.find(
+    (training) =>
+      training.back ||
+      training.chest ||
+      training.sholder ||
+      training.triceps ||
+      training.leg ||
+      training.biceps ||
+      training.rest
+  );
+
   return (
     <ContainerWeek>
       {trainingWeeks.length === 0 ? (
@@ -177,13 +188,15 @@ export function TrainingFriday() {
                 />
               )}
               {training.rest && <RestPage />}
-              <Button onClick={() => removeTraining(training.id)}>
-                Editar
-              </Button>
             </div>
           ))}
           {trainingWeeks.some((training) => !training.rest) && (
             <Button onClick={handleOpen}>Adiconar Outo treino</Button>
+          )}
+          {selectedTraining && (
+            <Button onClick={() => removeTraining(selectedTraining.id)}>
+              Remover
+            </Button>
           )}
         </div>
       )}
