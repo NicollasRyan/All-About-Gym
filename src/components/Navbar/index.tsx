@@ -47,6 +47,12 @@ export function Navbar() {
             <Box sx={{ p: 1 }}>
               <NavLink to="/workouts">Treinos</NavLink>
             </Box>
+            <Box sx={{ p: 1 }}>
+              <NavLink to="/workouts">materias para ajudar no treino</NavLink>
+            </Box>
+            <Box sx={{ p: 1 }}>
+              <NavLink to="/workouts">tecnicas avançadas</NavLink>
+            </Box>
           </PopperContent>
         </Box>
       </ContentBar>

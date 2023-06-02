@@ -27,6 +27,11 @@ import { TuesdayProvider } from "./context/tuesdayContext";
 import { WednesdayProvider } from "./context/wednesdayContext";
 import { Workouts } from "./pages/Workouts";
 import { BackTraining } from "./pages/Workouts/BackTraining";
+import { BicepsTraining } from "./pages/Workouts/BicepsTraining";
+import { ChestTraining } from "./pages/Workouts/ChestTraining";
+import { LegTraining } from "./pages/Workouts/LegTraining";
+import { ShoulderTraining } from "./pages/Workouts/ShoulderTraining";
+import { TricepsTraining } from "./pages/Workouts/TricepsTraining";
 
 createServer({
   models: {
@@ -112,6 +117,23 @@ root.render(
                         <Route
                           path="/workouts/back"
                           element={<BackTraining />}
+                        />
+                        <Route
+                          path="/workouts/biceps"
+                          element={<BicepsTraining />}
+                        />
+                        <Route
+                          path="/workouts/chest"
+                          element={<ChestTraining />}
+                        />
+                        <Route path="/workouts/leg" element={<LegTraining />} />
+                        <Route
+                          path="/workouts/shoulder"
+                          element={<ShoulderTraining />}
+                        />
+                        <Route
+                          path="/workouts/triceps"
+                          element={<TricepsTraining />}
                         />
                       </Route>
                     </Routes>

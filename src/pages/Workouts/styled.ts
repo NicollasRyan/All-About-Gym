@@ -10,4 +10,6 @@ export const Content = styled(Container)`
   padding-top: 100px;
 `;
 
-export const LinkTraninig = styled(Link)``;
+export const LinkTraninig = styled(Link)`
+  margin-right: 20px;
+`;
