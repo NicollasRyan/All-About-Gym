@@ -46,6 +46,19 @@ export function BicepsTraining() {
             visando o desenvolvimento equilibrado de todos os grupos
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Rosca direta com halteres</ContentList>
+          <ContentList>Martelo</ContentList>
+          <ContentList>Rosca barra W</ContentList>
+          <ContentList>Rosca corda</ContentList>
+          <ContentList>Rosca com halteres no banco inclinado</ContentList>
+          <ContentList>Remada baixa baixa com o triângulo</ContentList>
+          <ContentList>Banco scott</ContentList>
+          <ContentList>Rosca bíceps concentrada</ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

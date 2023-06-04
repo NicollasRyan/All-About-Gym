@@ -27,6 +27,23 @@ export function LegTraining() {
             resistência, estabilidade e mobilidade da região inferior do corpo.
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Agachamento com barra</ContentList>
+          <ContentList>Afundo com halteres</ContentList>
+          <ContentList>Rack</ContentList>
+          <ContentList>Leg Press</ContentList>
+          <ContentList>Bugaro</ContentList>
+          <ContentList>Mesa flexora</ContentList>
+          <ContentList>Cadeira flexora</ContentList>
+          <ContentList>Cadeira extensora</ContentList>
+          <ContentList>Abdutora</ContentList>
+          <ContentList>Adutora</ContentList>
+          <ContentList>Elevação pelvica</ContentList>
+          <ContentList>Coice</ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

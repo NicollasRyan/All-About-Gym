@@ -65,6 +65,21 @@ export function BackTraining() {
             individuais.
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Puxada alto frontal</ContentList>
+          <ContentList>Remada no banco 45º com halteres</ContentList>
+          <ContentList>Puxada triângulo</ContentList>
+          <ContentList>Remada curvada</ContentList>
+          <ContentList>Remada baixa baixa com a barra</ContentList>
+          <ContentList>Remada baixa baixa com o triângulo</ContentList>
+          <ContentList>Remada cavalinho</ContentList>
+          <ContentList>Serrote</ContentList>
+          <ContentList>Pulldown</ContentList>
+          <ContentList>Levantamento terra </ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

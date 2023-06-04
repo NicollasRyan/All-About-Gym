@@ -36,6 +36,18 @@ export function ChestTraining() {
             sinergistas durante os exercícios para o peito.
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Supino com barra ou halteres</ContentList>
+          <ContentList>Supino inclinado barra ou halteres</ContentList>
+          <ContentList>Crucifixo no voador</ContentList>
+          <ContentList>Supino sentado maquina</ContentList>
+          <ContentList>Cross over alto</ContentList>
+          <ContentList>Cross over Medio</ContentList>
+          <ContentList>Cross over baixo</ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

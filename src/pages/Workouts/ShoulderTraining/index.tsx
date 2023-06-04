@@ -29,6 +29,20 @@ export function ShoulderTraining() {
             equilibrada.
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Elevação lateral</ContentList>
+          <ContentList>Elevação frontal</ContentList>
+          <ContentList>Desenvolvimento</ContentList>
+          <ContentList>Desenvolvimento arnold</ContentList>
+          <ContentList>Elevação Lateral no cross ou polia</ContentList>
+          <ContentList>Elevação lateral inclinado</ContentList>
+          <ContentList>
+            Crucifixo inverso na maquina ou com halteres
+          </ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

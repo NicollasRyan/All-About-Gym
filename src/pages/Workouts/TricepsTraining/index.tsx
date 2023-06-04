@@ -28,6 +28,19 @@ export function TricepsTraining() {
             e tonificados.
           </Text>
         </BoxText>
+        <BoxText>
+          <Text>Agora veja todo os treinos de costa e sua execução:</Text>
+        </BoxText>
+        <ContainerList>
+          <ContentList>Triceps barra</ContentList>
+          <ContentList>Triceps corda</ContentList>
+          <ContentList>Rosca barra W</ContentList>
+          <ContentList>frances com halter ou polia</ContentList>
+          <ContentList>Supino fechado</ContentList>
+          <ContentList>Remada baixa baixa com o triângulo</ContentList>
+          <ContentList>Testa com halteres ou barra</ContentList>
+          <ContentList>Testa na polia</ContentList>
+        </ContainerList>
       </ContainerText>
     </Content>
   );

@@ -24,7 +24,7 @@ export const Text = styled.p`
   font-weight: 100;
 `;
 
-export const ContainerList = styled.ol`
+export const ContainerList = styled.ul`
   margin-top: 20px;
 `;
 
