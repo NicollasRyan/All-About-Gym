@@ -1,16 +1,11 @@
 import {
-  BoxText,
   Content,
-  Text,
   Title,
   ContainerList,
   ContentList,
   ContainerText,
   Img,
   BoxImg,
-  ImgProteina,
-  ImgCutting,
-  BoxTextDry,
 } from "./styled";
 
 import belt from "../../img/belt.jpg";

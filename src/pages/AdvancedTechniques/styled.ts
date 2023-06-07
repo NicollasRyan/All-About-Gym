@@ -19,6 +19,14 @@ export const ContainerText = styled(Container)`
   padding: 25px 0 25px 0;
 `;
 
+export const BoxText = styled.div`
+  margin-top: 20px;
+`;
+
+export const Text = styled.p`
+  font-weight: 100;
+`;
+
 export const BoxTextDry = styled.div`
   border-top: 1px solid #fff;
   margin-top: 15px;

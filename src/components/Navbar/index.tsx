@@ -53,7 +53,7 @@ export function Navbar() {
               </NavLink>
             </Box>
             <Box sx={{ p: 1 }}>
-              <NavLink to="/workouts">tecnicas avançadas</NavLink>
+              <NavLink to="/advancedTechniques">tecnicas avançadas</NavLink>
             </Box>
           </PopperContent>
         </Box>
