@@ -48,7 +48,9 @@ export function Navbar() {
               <NavLink to="/workouts">Treinos</NavLink>
             </Box>
             <Box sx={{ p: 1 }}>
-              <NavLink to="/workouts">materias para ajudar no treino</NavLink>
+              <NavLink to="/SubjectsHelpGym">
+                materias para ajudar no treino
+              </NavLink>
             </Box>
             <Box sx={{ p: 1 }}>
               <NavLink to="/workouts">tecnicas avançadas</NavLink>

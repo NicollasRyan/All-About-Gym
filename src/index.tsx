@@ -32,6 +32,7 @@ import { ChestTraining } from "./pages/Workouts/ChestTraining";
 import { LegTraining } from "./pages/Workouts/LegTraining";
 import { ShoulderTraining } from "./pages/Workouts/ShoulderTraining";
 import { TricepsTraining } from "./pages/Workouts/TricepsTraining";
+import { SubjectsHelpGym } from "./pages/SubjectsHelpGym";
 
 createServer({
   models: {
@@ -134,6 +135,10 @@ root.render(
                         <Route
                           path="/workouts/triceps"
                           element={<TricepsTraining />}
+                        />
+                        <Route
+                          path="/SubjectsHelpGym"
+                          element={<SubjectsHelpGym />}
                         />
                       </Route>
                     </Routes>
