@@ -32,21 +32,6 @@ export function SubjectsHelpGym() {
             pulso e conectada a uma alça ou gancho.
           </ContentList>
           <ContentList>
-            Elásticos de resistência: São faixas elásticas que oferecem
-            resistência durante os exercícios. Podem ser usados para trabalhar
-            diferentes grupos musculares, como peito, costas, ombros, braços e
-            pernas. Os elásticos de resistência são leves, portáteis e permitem
-            realizar uma variedade de movimentos, tanto para fortalecimento
-            muscular como para exercícios de reabilitação.
-          </ContentList>
-          <ContentList>
-            Caneleiras: São acessórios usados nas pernas, com pesos adicionais,
-            que ajudam a intensificar os exercícios de membros inferiores, como
-            agachamentos, levantamento de pernas e ponte de quadril. As
-            caneleiras são ajustáveis e proporcionam uma resistência extra para
-            fortalecer e tonificar os músculos das pernas e glúteos.
-          </ContentList>
-          <ContentList>
             Luvas de treino: São luvas acolchoadas, geralmente feitas de couro
             ou materiais sintéticos, que oferecem proteção e aderência durante
             exercícios que envolvem pegada, como levantamento de peso e barras.
@@ -61,11 +46,21 @@ export function SubjectsHelpGym() {
             permitindo levantar cargas mais pesadas com segurança.
           </ContentList>
           <ContentList>
-            Tornozeleiras de peso: São faixas ajustáveis que envolvem os
-            tornozelos e possuem pesos incorporados. Elas são utilizadas para
-            aumentar a resistência durante exercícios de membros inferiores,
-            como elevação de pernas, chute e abdução de quadril, fortalecendo os
-            músculos das pernas.
+            joelheira: é um tipo específico de joelheira projetada para fornecer
+            suporte adicional ao joelho durante os treinos de musculação e
+            exercícios de força na academia. Ela é especialmente útil em
+            exercícios que envolvem agachamentos, levantamentos de peso, lunges
+            e outros movimentos que colocam uma carga significativa sobre a
+            articulação do joelho.
+          </ContentList>
+          <ContentList>
+            A pulseira de pulso: é geralmente feita de materiais elásticos, como
+            nylon ou neoprene, e possui uma faixa ajustável que é envolvida em
+            torno do pulso, fornecendo compressão e suporte à articulação. Ela
+            ajuda a evitar o movimento excessivo do pulso, o que pode ocorrer
+            durante exercícios pesados, e fornece estabilidade adicional ao
+            realizar levantamentos ou movimentos que exijam força dos membros
+            superiores.
           </ContentList>
         </ContainerList>
         <BoxImg>
