@@ -41,9 +41,9 @@ export const ContentList = styled.li`
 `;
 
 export const Img = styled.img`
-  max-width: 350px;
+  max-width: 550px;
   min-width: 10px;
-  max-height: 250px;
+  max-height: 550px;
 
   border-radius: 5px;
 `;

@@ -7,18 +7,16 @@ import {
   Img,
   Text,
   BoxText,
+  BoxImg,
 } from "./styled";
 
-import belt from "../../img/belt.jpg";
-import gloves from "../../img/gloves.jpg";
-import pulse from "../../img/pulse.jpg";
-import kneePad from "../../img/kneePad.jpg";
-import strep from "../../img/strep.jpg";
+import Training from "../../img/Training.jpg";
 
 export function AdvancedTechniques() {
   return (
     <Content>
       <Title>Saiba mais sobre as Tecnicas avançadas:</Title>
+
       <ContainerText>
         <BoxText>
           <Text>
@@ -28,6 +26,9 @@ export function AdvancedTechniques() {
             avançadas que podem ser utilizadas:
           </Text>
         </BoxText>
+        <BoxImg>
+          <Img src={Training} />
+        </BoxImg>
         <ContainerList>
           <ContentList>
             Supersets: Consiste em realizar dois exercícios consecutivos sem
