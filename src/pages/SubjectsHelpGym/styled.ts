@@ -41,8 +41,11 @@ export const ContentList = styled.li`
 `;
 
 export const Img = styled.img`
-  max-width: 400px;
+  max-width: 350px;
   min-width: 10px;
+  max-height: 250px;
+
+  border-radius: 5px;
 `;
 
 export const ImgCutting = styled.img`

@@ -13,10 +13,11 @@ import {
   BoxTextDry,
 } from "./styled";
 
-import Arnold from "../../img/Arnold.jpg";
-import Eating from "../../img/Eating.jpg";
-import Cutting from "../../img/Cutting.jpg";
-import CuttingCbum from "../../img/CuttingCbum.jpg";
+import belt from "../../img/belt.jpg";
+import gloves from "../../img/gloves.jpg";
+import pulse from "../../img/pulse.jpg";
+import kneePad from "../../img/kneePad.jpg";
+import strep from "../../img/strep.jpg";
 
 export function SubjectsHelpGym() {
   return (
@@ -25,11 +26,14 @@ export function SubjectsHelpGym() {
       <ContainerText>
         <ContainerList>
           <ContentList>
-            Strap : é um acessório utilizado no treinamento de musculação e
+            Strap: é um acessório utilizado no treinamento de musculação e
             levantamento de peso para melhorar a aderência e a segurança durante
             os exercícios que envolvem a pegada. Ele consiste em uma tira de
             material resistente, geralmente nylon, que é enrolada em torno do
             pulso e conectada a uma alça ou gancho.
+            <BoxImg>
+              <Img src={strep} />
+            </BoxImg>
           </ContentList>
           <ContentList>
             Luvas de treino: São luvas acolchoadas, geralmente feitas de couro
@@ -37,6 +41,9 @@ export function SubjectsHelpGym() {
             exercícios que envolvem pegada, como levantamento de peso e barras.
             Elas ajudam a reduzir o atrito e proporcionam uma melhor aderência,
             evitando lesões nas mãos.
+            <BoxImg>
+              <Img src={gloves} />
+            </BoxImg>
           </ContentList>
           <ContentList>
             Cinturão de levantamento de peso: É um acessório utilizado para
@@ -44,6 +51,9 @@ export function SubjectsHelpGym() {
             como agachamentos, levantamento terra e supino. O cinturão ajuda a
             estabilizar a coluna vertebral, reduzindo o risco de lesões e
             permitindo levantar cargas mais pesadas com segurança.
+            <BoxImg>
+              <Img src={belt} />
+            </BoxImg>
           </ContentList>
           <ContentList>
             joelheira: é um tipo específico de joelheira projetada para fornecer
@@ -52,6 +62,9 @@ export function SubjectsHelpGym() {
             exercícios que envolvem agachamentos, levantamentos de peso, lunges
             e outros movimentos que colocam uma carga significativa sobre a
             articulação do joelho.
+            <BoxImg>
+              <Img src={kneePad} />
+            </BoxImg>
           </ContentList>
           <ContentList>
             A pulseira de pulso: é geralmente feita de materiais elásticos, como
@@ -61,11 +74,11 @@ export function SubjectsHelpGym() {
             durante exercícios pesados, e fornece estabilidade adicional ao
             realizar levantamentos ou movimentos que exijam força dos membros
             superiores.
+            <BoxImg>
+              <Img src={pulse} />
+            </BoxImg>
           </ContentList>
         </ContainerList>
-        <BoxImg>
-          <Img src={Arnold} />
-        </BoxImg>
       </ContainerText>
     </Content>
   );
