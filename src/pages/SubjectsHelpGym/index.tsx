@@ -25,10 +25,11 @@ export function SubjectsHelpGym() {
       <ContainerText>
         <ContainerList>
           <ContentList>
-            Steps ou caixas pliométricas: São plataformas elevadas utilizadas
-            para realizar exercícios de cardio, condicionamento físico e
-            treinamento de pernas, como step-ups, saltos e agachamentos. Eles
-            ajudam a melhorar a resistência cardiovascular e a força das pernas.
+            Strap : é um acessório utilizado no treinamento de musculação e
+            levantamento de peso para melhorar a aderência e a segurança durante
+            os exercícios que envolvem a pegada. Ele consiste em uma tira de
+            material resistente, geralmente nylon, que é enrolada em torno do
+            pulso e conectada a uma alça ou gancho.
           </ContentList>
           <ContentList>
             Elásticos de resistência: São faixas elásticas que oferecem
