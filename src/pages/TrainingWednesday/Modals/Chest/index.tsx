@@ -1,6 +1,7 @@
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
+
 import { DialogActions, Button, Dialog } from "@mui/material";
 
-import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import {
   ModalTitle,
   Checkbox,
@@ -8,6 +9,7 @@ import {
   BoxTraining,
   ModalFooter,
 } from "./styled";
+
 import { WednesdayContext } from "../../../../context/wednesdayContext";
 
 type FunctioType = {

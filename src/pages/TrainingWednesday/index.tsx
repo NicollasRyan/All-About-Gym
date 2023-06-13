@@ -1,21 +1,24 @@
-import { useParams } from "react-router-dom";
-import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
 import { useState, useContext } from "react";
+
+import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
+
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
 import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
+import { AddTraining } from "./Modals/AddTraining";
+import { Rest } from "./Modals/Rest";
+
 import { WednesdayContext } from "../../context/wednesdayContext";
+
 import { TricepsPage } from "../../components/TrainingPages/TricepsPage";
 import { ShoulderPage } from "../../components/TrainingPages/ShoulderPage";
 import { LegPage } from "../../components/TrainingPages/LegPage";
 import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
 import { BackPage } from "../../components/TrainingPages/BackPage";
-import { AddTraining } from "./Modals/AddTraining";
-import { Rest } from "./Modals/Rest";
 import { RestPage } from "../../components/TrainingPages/RestPage";
 
 export function TrainingWednesday() {

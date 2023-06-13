@@ -1,19 +1,16 @@
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle,
-} from "@mui/material";
-import { ContentWorkouts, BoxModal, ButtonModal, ModalTitle } from "./styled";
 import { useContext, useState } from "react";
+import { Button, Dialog, DialogActions } from "@mui/material";
+
+import { ContentWorkouts, BoxModal, ButtonModal, ModalTitle } from "./styled";
+
+import { MondayContext } from "../../../../context/mondayContext";
+
 import { Shoulder } from "../Shoulder";
 import { Chest } from "../Chest";
 import { Back } from "../Back";
 import { Triceps } from "../Triceps";
 import { Biceps } from "../Biceps";
 import { Leg } from "../Leg";
-import { MondayContext } from "../../../../context/mondayContext";
 
 interface ModalProps {
   open: boolean;

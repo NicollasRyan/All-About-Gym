@@ -1,14 +1,15 @@
-import { Dialog, Button } from "@mui/material";
-
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { Button, Dialog } from "@mui/material";
 import {
   ModalTitle,
-  Checkbox,
   ModalContent,
   BoxTraining,
+  Checkbox,
   ModalFooter,
 } from "./styled";
+
 import { FridayContext } from "../../../../context/fridayContext";
+
 type FunctioType = {
   openBiceps: boolean;
   handleClose: () => void;

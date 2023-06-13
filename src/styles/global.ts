@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+
 import gym from "../img/gym.jpg";
 
 export const GlobalStyle = createGlobalStyle`

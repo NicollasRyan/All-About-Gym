@@ -1,22 +1,25 @@
-import { useParams } from "react-router-dom";
-import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
 import { useState, useContext } from "react";
+
+import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
+
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
 import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
+import { AddTraining } from "./Modals/AddTraining";
+import { Rest } from "./Modals/Rest";
+
 import { TuesdayContext } from "../../context/tuesdayContext";
+
 import { TricepsPage } from "../../components/TrainingPages/TricepsPage";
 import { ShoulderPage } from "../../components/TrainingPages/ShoulderPage";
 import { LegPage } from "../../components/TrainingPages/LegPage";
 import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
 import { BackPage } from "../../components/TrainingPages/BackPage";
-import { AddTraining } from "./Modals/AddTraining";
 import { RestPage } from "../../components/TrainingPages/RestPage";
-import { Rest } from "./Modals/Rest";
 
 export function TrainingTuesday() {
   const { trainingWeeks, setTrainingWeeks } = useContext(TuesdayContext);

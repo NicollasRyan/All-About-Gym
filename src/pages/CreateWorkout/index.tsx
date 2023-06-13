@@ -1,6 +1,8 @@
 import { Content, Title } from "./styled";
-import { CardMonday } from "../../components/Cards/CardMonday";
+
 import { Link } from "react-router-dom";
+
+import { CardMonday } from "../../components/Cards/CardMonday";
 import { CardFriday } from "../../components/Cards/CardFriday";
 import { CardSaturday } from "../../components/Cards/CardSaturday";
 import { CardSunday } from "../../components/Cards/CardSunday";

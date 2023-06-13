@@ -1,12 +1,7 @@
-import { useParams } from "react-router-dom";
-import {
-  BoxTitle,
-  Button,
-  ContainerWeek,
-  ContentWorkouts,
-  Title,
-} from "./styled";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
+
+import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
+
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
 import { Back } from "./Modals/Back";
@@ -14,6 +9,8 @@ import { Triceps } from "./Modals/Triceps";
 import { Biceps } from "./Modals/Biceps";
 import { Leg } from "./Modals/Leg";
 import { AddTraining } from "./Modals/AddTraining";
+import { Rest } from "./Modals/Rest";
+
 import { FridayContext } from "../../context/fridayContext";
 import { BackPage } from "../../components/TrainingPages/BackPage";
 import { BicepsPage } from "../../components/TrainingPages/BicepsPage";
@@ -21,13 +18,7 @@ import { ChestPage } from "../../components/TrainingPages/ChestPage";
 import { LegPage } from "../../components/TrainingPages/LegPage";
 import { ShoulderPage } from "../../components/TrainingPages/ShoulderPage";
 import { TricepsPage } from "../../components/TrainingPages/TricepsPage";
-import { Rest } from "./Modals/Rest";
 import { RestPage } from "../../components/TrainingPages/RestPage";
-
-interface Props {
-  Training: () => void;
-  item: string;
-}
 
 export function TrainingFriday() {
   const { trainingWeeks, setTrainingWeeks } = useContext(FridayContext);

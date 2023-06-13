@@ -25,6 +25,7 @@ import { SundayProvider } from "./context/sundayContext";
 import { ThursdayProvider } from "./context/thursdayContext";
 import { TuesdayProvider } from "./context/tuesdayContext";
 import { WednesdayProvider } from "./context/wednesdayContext";
+
 import { Workouts } from "./pages/Workouts";
 import { BackTraining } from "./pages/Workouts/BackTraining";
 import { BicepsTraining } from "./pages/Workouts/BicepsTraining";
@@ -32,6 +33,7 @@ import { ChestTraining } from "./pages/Workouts/ChestTraining";
 import { LegTraining } from "./pages/Workouts/LegTraining";
 import { ShoulderTraining } from "./pages/Workouts/ShoulderTraining";
 import { TricepsTraining } from "./pages/Workouts/TricepsTraining";
+
 import { SubjectsHelpGym } from "./pages/SubjectsHelpGym";
 import { AdvancedTechniques } from "./pages/AdvancedTechniques";
 
