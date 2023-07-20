@@ -13,7 +13,11 @@ export const Content = styled(Container)`
   margin-top: 100px;
 `;
 
-export const ContainerText = styled(Container)`
+export const ContainerText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #202124;
   border-radius: 10px;
 
@@ -30,8 +34,13 @@ export const Box = styled.div`
   flex-direction: column;
 
   margin-bottom: 45px;
+  margin-right: 50px;
 
   align-items: center;
+`;
+
+export const Div = styled.div`
+  display: flex;
 `;
 
 export const Img1 = styled.img`
@@ -40,5 +49,5 @@ export const Img1 = styled.img`
 
 export const Img2 = styled.img`
   max-width: 400px;
-  max-height: 450px;
+  max-height: 350px;
 `;
