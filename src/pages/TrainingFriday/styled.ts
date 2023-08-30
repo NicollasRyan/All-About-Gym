@@ -6,8 +6,11 @@ export const ContainerWeek = styled(Container)`
 `;
 
 export const Title = styled.h1`
+  color: black;
   font-size: 30px;
   margin-bottom: 30px;
+  max-width: 450px;
+  background-color: white;
 `;
 export const BoxTitle = styled.div``;
 

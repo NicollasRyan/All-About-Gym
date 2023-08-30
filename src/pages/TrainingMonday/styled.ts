@@ -5,7 +5,11 @@ export const ContainerWeek = styled(Container)`
   margin-top: 100px;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  color: black;
+  max-width: 570px;
+  background-color: white;
+`;
 
 export const ContentWorkouts = styled.div`
   margin-top: 100px;
