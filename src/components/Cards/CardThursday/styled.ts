@@ -16,5 +16,5 @@ export const CardContainer = styled(Card)`
 `;
 
 export const BoxTitle = styled.div`
-  padding-bottom: 80px;
+  margin-bottom: 80px;
 `;

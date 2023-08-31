@@ -28,12 +28,13 @@ export function CardFriday() {
             <>
               {trainingWeeks.map((training) => (
                 <TrainingText key={training.id}>
-                  {training?.chest && "Peito"}
-                  {training?.back && "Costas"} {training?.biceps && "Biceps"}
-                  {training?.triceps && "Triceps"}
-                  {training?.sholder && "Ombro"}
-                  {training?.leg && "Perna"}
-                  {training?.rest && "Descansar"}
+                  {training?.chest ? "Peito" : "Não há nemhum treino"}
+                  {training?.back ? "Costas" : "Não há nemhum treino"}
+                  {training?.biceps ? "Biceps" : "Não há nemhum treino"}
+                  {training?.triceps ? "Triceps" : "Não há nemhum treino"}
+                  {training?.sholder ? "Ombro" : "Não há nemhum treino"}
+                  {training?.leg ? "Perna" : "Não há nemhum treino"}
+                  {training?.rest ? "Descansar" : "Não há nemhum treino"}
                 </TrainingText>
               ))}
             </>

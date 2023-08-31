@@ -31,6 +31,12 @@ export const ContainerText = styled.div`
   text-align: center;
 `;
 
+export const SmallCard = styled.div`
+  margin-top: 15px;
+  max-width: 430px;
+  max-height: 200px;
+`;
+
 export const Text = styled.p`
   font-size: 25px;
 `;

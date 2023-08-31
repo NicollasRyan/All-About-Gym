@@ -23,12 +23,13 @@ export function CardThursday() {
             <>
               {trainingWeeks.map((training) => (
                 <TrainingText key={training.id}>
-                  {training?.chest && "Peito"}
-                  {training?.back && "Costas"} {training?.biceps && "Biceps"}
-                  {training?.triceps && "Triceps"}
-                  {training?.sholder && "Ombro"}
-                  {training?.leg && "Perna"}
-                  {training?.rest && "Descansar"}
+                  {training.chest && "Peito"}
+                  {training.back && "Costas"}
+                  {training.biceps && "Biceps"}
+                  {training.triceps && "Triceps"}
+                  {training.sholder && "Ombro"}
+                  {training.leg && "Perna"}
+                  {training.rest && "Descansar"}
                 </TrainingText>
               ))}
             </>
