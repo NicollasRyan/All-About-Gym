@@ -12,3 +12,7 @@ export const Title = styled.h1`
 export const Content = styled(Container)`
   margin-top: 200px;
 `;
+
+export const BoxCard = styled.div`
+  margin-bottom: 35px;
+`;

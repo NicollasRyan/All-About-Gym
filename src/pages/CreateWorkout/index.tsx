@@ -1,4 +1,4 @@
-import { Content, Title } from "./styled";
+import { BoxCard, Content, Title } from "./styled";
 
 import { Link } from "react-router-dom";
 
@@ -15,27 +15,27 @@ export function CreateWorkout() {
     <Content>
       <Title>Monte seu treino semanal</Title>
 
-      <Link to={`/createworkout/Domingo`}>
+      <BoxCard>
         <CardSunday />
-      </Link>
-      <Link to={`/createworkout/Segunda`}>
+      </BoxCard>
+      <BoxCard>
         <CardMonday />
-      </Link>
-      <Link to={`/createworkout/Terca`}>
+      </BoxCard>
+      <BoxCard>
         <CardTuesday />
-      </Link>
-      <Link to={`/createworkout/Quarta`}>
+      </BoxCard>
+      <BoxCard>
         <CardWednesday />
-      </Link>
-      <Link to={`/createworkout/Quinta`}>
+      </BoxCard>
+      <BoxCard>
         <CardThursday />
-      </Link>
-      <Link to={`/createworkout/Sexta`}>
+      </BoxCard>
+      <BoxCard>
         <CardFriday />
-      </Link>
-      <Link to={`/createworkout/Sabado`}>
+      </BoxCard>
+      <BoxCard>
         <CardSaturday />
-      </Link>
+      </BoxCard>
     </Content>
   );
 }

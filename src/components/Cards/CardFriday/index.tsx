@@ -7,6 +7,7 @@ import {
 import { CardContainer, Text, BoxTitle, TrainingText } from "./styled";
 import { useContext } from "react";
 import { FridayContext } from "../../../context/fridayContext";
+import { Link } from "react-router-dom";
 
 export function CardFriday() {
   const { trainingWeeks } = useContext(FridayContext);
@@ -18,29 +19,30 @@ export function CardFriday() {
 
   return (
     <Container>
-      <CardContainer>
-        <CardActionArea>
-          {/* <CardMedia /> */}
-          <CardContent>
-            <BoxTitle>
-              <Text>Sexta</Text>
-            </BoxTitle>
-            <>
-              {trainingWeeks.map((training) => (
-                <TrainingText key={training.id}>
-                  {training?.chest ? "Peito" : "Não há nemhum treino"}
-                  {training?.back ? "Costas" : "Não há nemhum treino"}
-                  {training?.biceps ? "Biceps" : "Não há nemhum treino"}
-                  {training?.triceps ? "Triceps" : "Não há nemhum treino"}
-                  {training?.sholder ? "Ombro" : "Não há nemhum treino"}
-                  {training?.leg ? "Perna" : "Não há nemhum treino"}
-                  {training?.rest ? "Descansar" : "Não há nemhum treino"}
-                </TrainingText>
-              ))}
-            </>
-          </CardContent>
-        </CardActionArea>
-      </CardContainer>
+      <Link to={`/createworkout/Sexta`}>
+        <CardContainer>
+          <CardActionArea>
+            {/* <CardMedia /> */}
+            <CardContent>
+              <BoxTitle>
+                <Text>Sexta</Text>
+              </BoxTitle>
+              <>
+                {trainingWeeks.map((training) => (
+                  <TrainingText key={training.id}>
+                    {training?.chest && "Peito"}
+                    {training?.back && "Costas"} {training?.biceps && "Biceps"}
+                    {training?.triceps && "Triceps"}
+                    {training?.sholder && "Ombro"}
+                    {training?.leg && "Perna"}
+                    {training?.rest && "Descansar"}
+                  </TrainingText>
+                ))}
+              </>
+            </CardContent>
+          </CardActionArea>
+        </CardContainer>
+      </Link>
     </Container>
   );
 }

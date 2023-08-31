@@ -12,7 +12,6 @@ export const TrainingText = styled.p`
 export const CardContainer = styled(Card)`
   max-width: 640px;
   height: 200px;
-  margin-bottom: 35px;
 `;
 
 export const BoxTitle = styled.div`
