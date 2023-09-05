@@ -25,29 +25,28 @@ export const ContainerText = styled.div`
 `;
 
 export const LinkTraninig = styled(Link)`
-  margin-right: 20px;
-  text-decoration: none;
-`;
-
-export const Box = styled.div`
   display: flex;
   flex-direction: column;
 
   margin-bottom: 45px;
-  margin-right: 50px;
+  margin-left: 50px;
 
   align-items: center;
+  margin-right: 20px;
+  text-decoration: none;
+
+  background-color: #595959;
+
+  padding: 70px;
+  border-radius: 10px;
+
+  &:hover {
+    transition: 0.5s;
+    color: #d6d6d6;
+    background-color: #383838;
+  }
 `;
 
 export const Div = styled.div`
   display: flex;
-`;
-
-export const Img1 = styled.img`
-  max-width: 550px;
-`;
-
-export const Img2 = styled.img`
-  max-width: 400px;
-  max-height: 350px;
 `;

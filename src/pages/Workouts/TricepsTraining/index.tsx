@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import triceps from "../../../img/triceps.jpg";
 
 export function TricepsTraining() {
   return (
@@ -28,6 +27,7 @@ export function TricepsTraining() {
             e tonificados.
           </Text>
         </BoxText>
+        <Img src={triceps} />
         <BoxText>
           <Text>Agora veja todo os treinos de costa e sua execução:</Text>
         </BoxText>

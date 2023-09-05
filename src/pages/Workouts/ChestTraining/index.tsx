@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import Chest from "../../../img/Chest.jpg";
 
 export function ChestTraining() {
   return (
@@ -26,7 +25,7 @@ export function ChestTraining() {
             centro do corpo e a adução do braço em direção ao centro do peito.
           </Text>
         </BoxText>
-
+        <Img src={Chest} />
         <BoxText>
           <Text>
             Um treino bem estruturado para o peito visa fortalecer e desenvolver

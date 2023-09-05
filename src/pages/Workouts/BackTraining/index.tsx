@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import backWorkout from "../../../img/backWorkout.jpg";
 
 export function BackTraining() {
   return (
@@ -26,7 +25,7 @@ export function BackTraining() {
             de exercícios que visem os diferentes músculos dessa região.
           </Text>
         </BoxText>
-
+        <Img src={backWorkout} />
         <BoxText>
           <Text>
             Os principais grupos musculares trabalhados no treino de costas

@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import bicepsTraining from "../../../img/bicepsTraining.jpg";
 
 export function BicepsTraining() {
   return (
@@ -25,7 +24,7 @@ export function BicepsTraining() {
             braquial e o braquial anterior.
           </Text>
         </BoxText>
-
+        <Img src={bicepsTraining} />
         <BoxText>
           <Text>
             O bíceps braquial é o músculo mais proeminente e conhecido dos

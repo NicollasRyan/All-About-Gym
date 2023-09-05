@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import legTraining from "../../../img/legTraining.jpg";
 
 export function LegTraining() {
   return (
@@ -27,6 +26,7 @@ export function LegTraining() {
             resistência, estabilidade e mobilidade da região inferior do corpo.
           </Text>
         </BoxText>
+        <Img src={legTraining} />
         <BoxText>
           <Text>Agora veja todo os treinos de costa e sua execução:</Text>
         </BoxText>

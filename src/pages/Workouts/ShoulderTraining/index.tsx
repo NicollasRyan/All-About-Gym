@@ -4,13 +4,12 @@ import {
   Text,
   Title,
   ContainerText,
-  Img,
-  BoxImg,
-  ImgProteina,
-  ImgLeg,
   ContentList,
   ContainerList,
+  Img,
 } from "./styled";
+
+import Shoulders from "../../../img/Shoulders.jpg";
 
 export function ShoulderTraining() {
   return (
@@ -29,6 +28,7 @@ export function ShoulderTraining() {
             equilibrada.
           </Text>
         </BoxText>
+        <Img src={Shoulders} />
         <BoxText>
           <Text>Agora veja todo os treinos de costa e sua execução:</Text>
         </BoxText>
