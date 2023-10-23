@@ -53,6 +53,8 @@ interface TrainingProps {
   adductor?: string;
   pelvicElevation?: string;
   kick?: string;
+  stiff?: string;
+  calf?: string;
   // Sholder
   sholder?: string;
   sideRaise?: string;
@@ -119,6 +121,8 @@ interface workoutInputProps {
   adductor?: string;
   pelvicElevation?: string;
   kick?: string;
+  stiff?: string;
+  calf?: string;
   // Sholder
   sholder?: string;
   sideRaise?: string;
@@ -161,7 +165,7 @@ export function FridayProvider({ children }: workoutProviderProps) {
       .then((response) => setTrainingWeeks(response.data.trainingWeeks));
   }, []);
 
-  async function createTrainingWeeks(trainingWeeksInput: workoutInputProps) {
+  async function createTrainingWeeks(trainingWeeksInput: TrainingProps) {
     const response = await api.post("/trainingWeek", trainingWeeksInput);
     const { trainingWeek } = response.data;
 

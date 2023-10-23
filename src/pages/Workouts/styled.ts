@@ -7,6 +7,7 @@ export const Title = styled.h1`
   max-width: 670px;
   background-color: white;
   margin-bottom: 50px;
+  border-radius: 5px;
 `;
 
 export const Content = styled(Container)`

@@ -14,7 +14,7 @@ export function CardThursday() {
 
   return (
     <Container>
-      <Link to={`/createworkout/Quinta`}>
+      <Link to={`/createworkout/quinta`}>
         <CardContainer>
           <CardActionArea>
             {/* <CardMedia /> */}

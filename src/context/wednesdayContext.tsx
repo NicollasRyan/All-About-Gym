@@ -53,6 +53,8 @@ interface TrainingProps {
   adductor?: string;
   pelvicElevation?: string;
   kick?: string;
+  stiff?: string;
+  calf?: string;
   // Sholder
   sholder?: string;
   sideRaise?: string;
@@ -119,6 +121,8 @@ interface workoutInputProps {
   adductor?: string;
   pelvicElevation?: string;
   kick?: string;
+  stiff?: string;
+  calf?: string;
   // Sholder
   sholder?: string;
   sideRaise?: string;

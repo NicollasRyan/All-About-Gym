@@ -154,6 +154,8 @@ export function TrainingWednesday() {
                   adductor={training.adductor}
                   pelvicElevation={training.pelvicElevation}
                   kick={training.kick}
+                  stiff={training.stiff}
+                  calf={training.calf}
                 />
               )}
               {training.sholder && (

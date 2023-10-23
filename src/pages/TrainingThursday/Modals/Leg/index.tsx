@@ -31,6 +31,8 @@ export function Leg({ openLeg, handleClose }: FunctioType) {
   const [adductor, setAdductor] = useState("");
   const [pelvicElevation, setPelvicElevation] = useState("");
   const [kick, setKick] = useState("");
+  const [stiff, setStiff] = useState("");
+  const [calf, setCalf] = useState("");
 
   async function handleCreateWorkout(e: FormEvent) {
     e.preventDefault();
@@ -49,6 +51,8 @@ export function Leg({ openLeg, handleClose }: FunctioType) {
       adductor,
       pelvicElevation,
       kick,
+      stiff,
+      calf,
     });
 
     handleClose();
@@ -176,6 +180,26 @@ export function Leg({ openLeg, handleClose }: FunctioType) {
               value="Coice"
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setKick(e.target.value)
+              }
+            />
+          </BoxTraining>
+          <BoxTraining>
+            Stiff
+            <Checkbox
+              type="checkbox"
+              value="Stiff"
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setStiff(e.target.value)
+              }
+            />
+          </BoxTraining>
+          <BoxTraining>
+            Panturrilha
+            <Checkbox
+              type="checkbox"
+              value="Panturrilha"
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setCalf(e.target.value)
               }
             />
           </BoxTraining>

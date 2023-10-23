@@ -95,7 +95,7 @@ export function TrainingSaturday() {
       ) : (
         <div>
           {trainingWeeks.some((training) => !training.rest) && (
-            <Title>Na sexta você vai treinar:</Title>
+            <Title>Na Sábado você vai treinar:</Title>
           )}
           {trainingWeeks.map((training) => (
             <div key={training.id}>
@@ -153,6 +153,8 @@ export function TrainingSaturday() {
                   adductor={training.adductor}
                   pelvicElevation={training.pelvicElevation}
                   kick={training.kick}
+                  stiff={training.stiff}
+                  calf={training.calf}
                 />
               )}
               {training.sholder && (

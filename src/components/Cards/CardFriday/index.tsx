@@ -19,7 +19,7 @@ export function CardFriday() {
 
   return (
     <Container>
-      <Link to={`/createworkout/Sexta`}>
+      <Link to={`/createworkout/sexta`}>
         <CardContainer>
           <CardActionArea>
             {/* <CardMedia /> */}

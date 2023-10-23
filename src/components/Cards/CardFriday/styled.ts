@@ -7,6 +7,7 @@ export const Text = styled.h2`
 
 export const TrainingText = styled.p`
   color: black;
+  font-size: 18px;
 `;
 
 export const CardContainer = styled(Card)`
@@ -15,5 +16,5 @@ export const CardContainer = styled(Card)`
 `;
 
 export const BoxTitle = styled.div`
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 `;

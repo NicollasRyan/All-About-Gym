@@ -22,6 +22,8 @@ interface legProps {
   adductor?: string;
   pelvicElevation?: string;
   kick?: string;
+  stiff?: string;
+  calf?: string;
 }
 
 export function LegPage({
@@ -38,6 +40,8 @@ export function LegPage({
   adductor,
   pelvicElevation,
   kick,
+  stiff,
+  calf,
 }: legProps) {
   return (
     <Content>
@@ -100,6 +104,16 @@ export function LegPage({
         {kick && (
           <Box>
             <TrainingText>{kick}</TrainingText>
+          </Box>
+        )}
+        {stiff && (
+          <Box>
+            <TrainingText>{stiff}</TrainingText>
+          </Box>
+        )}
+        {calf && (
+          <Box>
+            <TrainingText>{calf}</TrainingText>
           </Box>
         )}
       </BoxTraining>
