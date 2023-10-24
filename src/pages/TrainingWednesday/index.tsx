@@ -1,6 +1,12 @@
 import { useState, useContext } from "react";
 
-import { Button, ContainerWeek, ContentWorkouts, Title } from "./styled";
+import {
+  Button,
+  ContainerWeek,
+  ContentWorkouts,
+  Title,
+  Title2,
+} from "./styled";
 
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
@@ -96,7 +102,7 @@ export function TrainingWednesday() {
       ) : (
         <div>
           {trainingWeeks.some((training) => !training.rest) && (
-            <Title>Na quarta você vai treinar:</Title>
+            <Title2>Na quarta você vai treinar:</Title2>
           )}
           {trainingWeeks.map((training) => (
             <div key={training.id}>

@@ -9,6 +9,15 @@ export const Title = styled.h1`
   color: black;
   max-width: 550px;
   background-color: white;
+  border-radius: 5px;
+`;
+
+export const Title2 = styled.h1`
+  color: black;
+  max-width: 480px;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 5px;
 `;
 
 export const ContentWorkouts = styled.div`

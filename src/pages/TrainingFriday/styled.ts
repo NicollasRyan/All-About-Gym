@@ -8,11 +8,19 @@ export const ContainerWeek = styled(Container)`
 export const Title = styled.h1`
   color: black;
   font-size: 30px;
-  margin-bottom: 30px;
   max-width: 450px;
   background-color: white;
+  border-radius: 5px;
 `;
-export const BoxTitle = styled.div``;
+
+export const Title2 = styled.h1`
+  color: black;
+  font-size: 30px;
+  margin-bottom: 30px;
+  max-width: 390px;
+  background-color: white;
+  border-radius: 5px;
+`;
 
 export const ContentWorkouts = styled.div`
   margin-top: 100px;
