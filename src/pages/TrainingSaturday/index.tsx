@@ -5,7 +5,7 @@ import {
   ContentWorkouts,
   Title,
   Title2,
-} from "./styled";
+} from "../../styles/global";
 
 import { Chest } from "./Modals/Chest";
 import { Shoulder } from "./Modals/Shoulder";
